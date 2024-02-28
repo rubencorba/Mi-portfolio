@@ -1,26 +1,25 @@
 import { 
-  Box, 
-  Heading, 
-  SimpleGrid, 
-  Image, 
-  Text, 
-  Card,
-  Flex
-} from "@chakra-ui/react";
+    Box, 
+    Heading, 
+    SimpleGrid, 
+    Image, 
+    Text, 
+    Card,
+    Flex
+  } from "@chakra-ui/react";
 
-import Equipaje from './chancaca.jpg';
-import AboutMe from "../aboutMe/aboutMe";
+  import Equipaje from './gladis2.jpg';
 
-function Home() {
-    return (
-      <Flex
+function AboutMe() {
+  return (
+    <Flex
         h='100vh'
         position= 'relative'
         direction={{ base: "column", md: "row" }}
         >
             <Box
             /* position='absolute' */ // Volver a esto para que funcione bien
-            position='relative'
+            position='absolute'
             top='0'
             left='0'
             w='100%'
@@ -56,13 +55,8 @@ function Home() {
             Rubén Corbalán
             </Heading>
             </Flex>
-
-            <Box>
-            <AboutMe/>
-
-            </Box>
             </Flex>
-    );
+  );
 }
 
-export default Home;
+export default AboutMe;
