@@ -10,6 +10,8 @@ import {
 
   import Equipaje from './gladis2.jpg';
 
+
+
 function AboutMe() {
   return (
     <Flex
