@@ -53,7 +53,7 @@ const NavBar = () => {
               : "transparent"
             : */ 
             
-            /* "#009ED1" */"rgb(128, 128, 128)"
+            "#034873"
         }
         alignItems="center"
         justify="space-between"
@@ -79,20 +79,30 @@ const NavBar = () => {
               <Box>
                 <Flex>
                 {/* <Link to="/"> */}
-                    <Button colorScheme="#009ED1" fontSize="1xl">
+                    <Button colorScheme="#009ED1" fontSize="1xl" mx="3">
                       Home
                     </Button>
                   {/* </Link> */}
 
                   {/* <Link to="/about"> */}
-                    <Button colorScheme="#009ED1" fontSize="1xl">
-                      Sobre mi
+                    <Button colorScheme="#009ED1" fontSize="1xl" mx="3">
+                      About Me
                     </Button>
                   {/* </Link> */}
 
                   {/* <Link to="/questions"> */}
-                    <Button colorScheme="#009ED1" fontSize="1xl">
-                      Proyectos
+                    <Button colorScheme="#009ED1" fontSize="1xl" mx="3">
+                      Projects
+                    </Button>
+                  {/* </Link> */}
+                  {/* <Link to="/questions"> */}
+                    <Button colorScheme="#009ED1" fontSize="1xl" mx="3">
+                      Skills
+                    </Button>
+                  {/* </Link> */}
+                  {/* <Link to="/questions"> */}
+                    <Button colorScheme="#009ED1" fontSize="1xl" mx="3">
+                      Contact
                     </Button>
                   {/* </Link> */}
                 </Flex>
