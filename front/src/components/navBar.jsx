@@ -18,6 +18,7 @@ import { useSelector } from "react-redux";
 /* import {verificationComplete} from '../../context/authContext'; */
 /* import LoginForm from "../../views/Forms/Login/Login"; */
 
+
 const NavBar = () => {
   /* const { currentUser } = useSelector((state) => state);
   const [navBackground, setNavBackground] = useState(false);
