@@ -13,10 +13,7 @@ import { Link, useLocation } from "react-router-dom";
 /* import Vamos from "../../assets/logoblanco.png"; */
 /* import MobileNavbar from "../navBar/mobileNavbar/mobileNavbar"; */
 import { useSelector } from "react-redux";
-/* import LogOut from "../../views/Forms/LogOut/logout"; */
-/* import ViewOptionPerfil from "./viewOption/viewOptionPerfil"; */
-/* import {verificationComplete} from '../../context/authContext'; */
-/* import LoginForm from "../../views/Forms/Login/Login"; */
+
 
 
 
