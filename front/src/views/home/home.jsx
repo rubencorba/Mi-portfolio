@@ -11,6 +11,7 @@ import {
 import Equipaje from './paPerfilp.jpg';
 import AboutMe from "../aboutMe/aboutMe";
 
+
 function Home() {
     return (
       <Flex
