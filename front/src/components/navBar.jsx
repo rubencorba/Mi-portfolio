@@ -16,7 +16,6 @@ import { useSelector } from "react-redux";
 
 
 
-
 const NavBar = () => {
   /* const { currentUser } = useSelector((state) => state);
   const [navBackground, setNavBackground] = useState(false);
