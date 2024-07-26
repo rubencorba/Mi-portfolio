@@ -8,13 +8,17 @@ import {
   Flex,
   Textarea,
   Divider,
-  AbsoluteCenter
+  AbsoluteCenter,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Button
 } from "@chakra-ui/react";
 
 import Equipaje from './paPerfilp.jpg';
 import AboutMe from "../aboutMe/aboutMe";
 
-import ThreeScene from './threeScene';
+/* import ThreeScene from './threeScene'; */
 
 
 function Home() {
@@ -70,12 +74,11 @@ function Home() {
             fontSize='xl'
             mt='5rem'
 
-            
-            >¡Hola! 👋 Soy Rubén Corbalán, un apasionado desarrollador web Full Stack. 👨‍💻 Inicié mi recorrido académico en la Licenciatura en Sistemas de Información en UNSE y recientemente culminé el bootcamp de Soy Henry, donde trabajé en proyectos utilizando JS, React, Node, Redux, Express, PostgreSQL, Sequelize, HTML, y CSS.
+            lineHeight='1.5'
+            >Argentino con pasión por el desarrollo Web 👨‍💻 <br/><br/>
 
-            Me motiva aprender nuevas tecnologías y mejorar mis habilidades en informática. Disfruto los desafíos, los viajes y la adquisición de conocimientos. He trabajado como profesor de ajedrez, recepcionista, fotógrafo, y traductor en diferentes países de América Latina, lo que me ha brindado una gran versatilidad laboral. Domino el español, inglés y portugués, y estoy abierto a nuevas oportunidades y colaboraciones en el ámbito de IT. 
-            
-            Conversemos sobre cómo podemos colaborar
+            Conversemos sobre cómo diseñar tu página web para que sea única <br/><br/>
+
             ✉ Mail: rubencorba@gmail.com
             </Text>
             </Heading>
@@ -89,7 +92,7 @@ function Home() {
                   ABOUT ME
                 </AbsoluteCenter>
             </Box>
-            {/* <Text
+            <Text
             fontSize='xl'
             mt='5rem'
 
@@ -99,14 +102,66 @@ function Home() {
             letterSpacing='2px'
             
             textShadow='2px 2px 4px rgba(0, 0, 0, 0.9)'
+             mx='5rem'
+            mb='5rem'
             >¡Hola! 👋 Soy Rubén Corbalán, un apasionado desarrollador web Full Stack. 👨‍💻 Inicié mi recorrido académico en la Licenciatura en Sistemas de Información en UNSE y recientemente culminé el bootcamp de Soy Henry, donde trabajé en proyectos utilizando JS, React, Node, Redux, Express, PostgreSQL, Sequelize, HTML, y CSS.
 
             Me motiva aprender nuevas tecnologías y mejorar mis habilidades en informática. Disfruto los desafíos, los viajes y la adquisición de conocimientos. He trabajado como profesor de ajedrez, recepcionista, fotógrafo, y traductor en diferentes países de América Latina, lo que me ha brindado una gran versatilidad laboral. Domino el español, inglés y portugués, y estoy abierto a nuevas oportunidades y colaboraciones en el ámbito de IT. 
             
             Conversemos sobre cómo podemos colaborar
             ✉ Mail: rubencorba@gmail.com
-            </Text> */}
-            <ThreeScene />
+            </Text>
+            {/* <ThreeScene /> */}
+
+            <Box position='relative' padding='10'>
+              <Divider />
+                <AbsoluteCenter bg='white' px='4'>
+                  PROJECTS
+                </AbsoluteCenter>
+            </Box>
+
+            <Box display="flex" justifyContent="center" alignItems="center" mb='5rem'>
+            <SimpleGrid 
+            spacing={4} 
+            templateColumns='repeat(auto-fill, minmax(200px, 1fr))'
+            /* justifyItems="center"
+            alignItems="center" */
+            >
+  <Card>
+    <CardHeader>
+      <Heading size='md'> Customer dashboard</Heading>
+    </CardHeader>
+    <CardBody>
+      <Text>View a summary of all your customers over the last month.</Text>
+    </CardBody>
+    <CardFooter>
+      <Button>View here</Button>
+    </CardFooter>
+  </Card>
+  <Card>
+    <CardHeader>
+      <Heading size='md'> Customer dashboard</Heading>
+    </CardHeader>
+    <CardBody>
+      <Text>View a summary of all your customers over the last month.</Text>
+    </CardBody>
+    <CardFooter>
+      <Button>View here</Button>
+    </CardFooter>
+  </Card>
+  <Card>
+    <CardHeader>
+      <Heading size='md'> Customer dashboard</Heading>
+    </CardHeader>
+    <CardBody>
+      <Text>View a summary of all your customers over the last month.</Text>
+    </CardBody>
+    <CardFooter>
+      <Button>View here</Button>
+    </CardFooter>
+  </Card>
+</SimpleGrid>
+</Box>
             </Flex>
     );
 }
