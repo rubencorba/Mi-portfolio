@@ -14,7 +14,7 @@ import {
 import Equipaje from './paPerfilp.jpg';
 import AboutMe from "../aboutMe/aboutMe";
 
-
+import ThreeScene from './threeScene';
 
 
 function Home() {
@@ -89,7 +89,7 @@ function Home() {
                   ABOUT ME
                 </AbsoluteCenter>
             </Box>
-            <Text
+            {/* <Text
             fontSize='xl'
             mt='5rem'
 
@@ -97,7 +97,7 @@ function Home() {
             textTransform='uppercase'
             fontFamily="'DIN Alternate Black', sans-serif"
             letterSpacing='2px'
-            /* fontSize={['xl', null, '4xl']} */
+            
             textShadow='2px 2px 4px rgba(0, 0, 0, 0.9)'
             >¡Hola! 👋 Soy Rubén Corbalán, un apasionado desarrollador web Full Stack. 👨‍💻 Inicié mi recorrido académico en la Licenciatura en Sistemas de Información en UNSE y recientemente culminé el bootcamp de Soy Henry, donde trabajé en proyectos utilizando JS, React, Node, Redux, Express, PostgreSQL, Sequelize, HTML, y CSS.
 
@@ -105,7 +105,8 @@ function Home() {
             
             Conversemos sobre cómo podemos colaborar
             ✉ Mail: rubencorba@gmail.com
-            </Text>
+            </Text> */}
+            <ThreeScene />
             </Flex>
     );
 }
