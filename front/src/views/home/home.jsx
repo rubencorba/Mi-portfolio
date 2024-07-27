@@ -15,7 +15,9 @@ import {
   Button
 } from "@chakra-ui/react";
 
-import Equipaje from './paPerfilp.jpg';
+import Equipaje from './paPerfilPortfolio.png';
+import GitHubLogo from './logotipo-de-github.png';
+import LinkeIndLogo from './linkedin.png';
 import AboutMe from "../aboutMe/aboutMe";
 
 /* import ThreeScene from './threeScene'; */
@@ -36,7 +38,7 @@ function Home() {
         >
           {/* Sección de la imagen */}
         <Flex
-          flex='1' // Ocupa todo el espacio disponible
+          flex='2' // Ocupa todo el espacio disponible
           justifyContent='center' // Centra horizontalmente
           alignItems='center' // Centra verticalmente
         >
@@ -44,8 +46,10 @@ function Home() {
           src={Equipaje} 
           alt="Equipaje" 
           borderRadius='10px' 
-          mt='5rem'
-          /> {/* Aquí puedes ajustar el radio de borde según tu preferencia */}
+          /* mt='2rem' */
+          ml='5rem'
+          width='300px'
+          /> 
         </Flex>
            
             <Flex
@@ -56,9 +60,12 @@ function Home() {
             w='100%'
             mb={{ base: '-10rem', md: '2' }}
             p={['30px', null, '50px 10%']} */
-            flex='1' // Ocupa todo el espacio disponible
-          justifyContent='flex-start' // Centra horizontalmente
+            flex='2' 
+          /* justifyContent='flex-start'  */
+          justifyContent='center'
           alignItems='center' 
+          /* ml='3rem' */
+          direction="column"
             >
             <Heading
             
@@ -70,7 +77,7 @@ function Home() {
             textShadow='2px 2px 4px rgba(0, 0, 0, 0.9)'
             >
             {'<Rubén Corbalán/>'}
-            <Text
+            {/* <Text
             fontSize='xl'
             mt='5rem'
 
@@ -80,8 +87,27 @@ function Home() {
             Conversemos sobre cómo diseñar tu página web para que sea única <br/><br/>
 
             ✉ Mail: rubencorba@gmail.com
-            </Text>
+            </Text> */}
             </Heading>
+            <Flex gap="1rem">
+            <Image 
+          src={GitHubLogo} 
+          alt="GitHubLogo" 
+          /* borderRadius='10px'  */
+          mt='2rem'
+          /* ml='5rem' */
+          width='50px'
+          /> 
+            <Image 
+          src={LinkeIndLogo} 
+          alt="LinkeIndLogo" 
+          /* borderRadius='10px'  */
+          mt='2rem'
+          /* ml='5rem' */
+          width='50px'
+          /> 
+          </Flex>
+
             </Flex>
 
            
