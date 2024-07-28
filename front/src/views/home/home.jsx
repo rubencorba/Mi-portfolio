@@ -15,9 +15,12 @@ import {
   Button,
   ButtonGroup,
   IconButton,
+  FormControl,
+  FormLabel,
+  Input,
   
 } from "@chakra-ui/react";
-import {ArrowDownIcon} from '@chakra-ui/icons'
+import {ArrowDownIcon, EmailIcon} from '@chakra-ui/icons'
 
 import Equipaje from './paPerfilPortfolio.png';
 import GitHubLogo from './logotipo-de-github.png';
@@ -69,13 +72,6 @@ function Home() {
         </Flex>
            
             <Flex
-            /* direction='column'
-            alignItems={['flex-start', null, 'flex-start']}
-            justify={['flex-start', null, 'center']}
-            h='100%'
-            w='100%'
-            mb={{ base: '-10rem', md: '2' }}
-            p={['30px', null, '50px 10%']} */
             flex='1' 
           /* justifyContent='flex-start'  */
           justifyContent='center'
@@ -243,7 +239,7 @@ function Home() {
                   SKILLS
                 </AbsoluteCenter>
             </Box>
-            <Flex gap="2rem"  mt='5rem' mx='5rem' mb='5rem'>
+            <Flex gap="2rem"  mt='5rem' /* position='absolute' *//* mx='5rem' */ mb='5rem' alignItems="center" justifyContent="center" display="flex" >
             <Image 
           src={logos} 
           alt="logos" 
@@ -252,38 +248,32 @@ function Home() {
             <Image 
           src={reactLogo} 
           alt="reactLogo" 
-         
-          
-          
-          width='7rem'
+          width='8rem'
           /> 
             <Image 
           src={reduxLogo} 
           alt="reduxLogo" 
-         
-          
-          
-          width='7rem'
+          width='8rem'
           /> 
             <Image 
           src={nodeLogo} 
           alt="nodeLogo" 
-          width='7rem'
+          width='8rem'
           /> 
             <Image 
           src={expressLogo} 
           alt="expressLogo" 
-          width='7rem'
+          width='8rem'
           /> 
             <Image 
           src={postgreLogo} 
           alt="postgreLogo" 
-          width='7rem'
+          width='8rem'
           /> 
             <Image 
           src={mySqlLogo} 
           alt="mySqlLogo" 
-          width='7rem'
+          width='8rem'
           /> 
             </Flex>
           <Box position='relative' padding='10'>
@@ -292,6 +282,31 @@ function Home() {
                   CONTACT
                 </AbsoluteCenter>
             </Box>
+            <Flex
+      /* height="100vh" */
+      alignItems="center"
+      justifyContent="center"
+      /* bg="gray.100" */
+      my='5rem'
+    >
+              <FormControl bg='white' borderRadius="lg" width='30rem' p='1rem'>
+                <FormLabel>Email address</FormLabel>
+                <Input type='email' />
+                <FormLabel>Message</FormLabel>
+                {/* <Input type='text' size='lg' height='10rem'/> */}
+                <Textarea
+                  /* value={value}
+                  onChange={handleInputChange}
+                  placeholder='Here is a sample placeholder' */
+                  borderRadius="lg"
+                  size='sm'
+                />
+                <Button leftIcon={<EmailIcon />} color=/* '#2c5e7e' */'#2c5e7e' /* bg="#2c5e7e" */border='2px' borderColor='#2c5e7e' variant='solid' mt='1rem'>
+                  Send
+                </Button>
+              </FormControl>
+           
+            </Flex>
             </Flex>
     );
 }
