@@ -7,12 +7,18 @@ import {
   Avatar,
   AvatarGroup,
   useMediaQuery,
-  Progress
+  Progress,
+  Select,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem
 } from "@chakra-ui/react";
 import { Link, useLocation } from "react-router-dom";
 /* import Vamos from "../../assets/logoblanco.png"; */
 /* import MobileNavbar from "../navBar/mobileNavbar/mobileNavbar"; */
 import { useSelector } from "react-redux";
+import { ChevronDownIcon } from "@chakra-ui/icons";
 
 
 
@@ -77,9 +83,7 @@ const NavBar = () => {
               <Box>
                 <Flex>
                 {/* <Link to="/"> */}
-                    <Button colorScheme="#009ED1" fontSize="1xl" mx="3">
-                      Home
-                    </Button>
+                    
                   {/* </Link> */}
 
                   {/* <Link to="/about"> */}
@@ -103,17 +107,26 @@ const NavBar = () => {
                       Contact
                     </Button>
                   {/* </Link> */}
+                  {/* <Select  color="white"  placeholder='Language' mx="3" width='10rem'> 
+  <option value='option1'>English</option>
+  <option value='option2'>Español</option>
+  <option value='option3'>Português</option>
+</Select> */}
+<Menu>
+  <MenuButton as={Button} rightIcon={<ChevronDownIcon />} color="white" bg="transparent" border="1px solid white" _hover={{ bg: "transparent" }}>
+    Language
+  </MenuButton>
+  <MenuList>
+    <MenuItem>English</MenuItem>
+    <MenuItem>Español</MenuItem>
+    <MenuItem>Português</MenuItem>
+  </MenuList>
+</Menu>
                 </Flex>
               </Box>
             
           </Flex>
         </Box>
-
-       {/*  <Box>
-          <AvatarGroup spacing="1rem" mx="20px">
-             <ViewOptionPerfil/> 
-          </AvatarGroup>
-        </Box> */}
       </Flex>
   </>
 );

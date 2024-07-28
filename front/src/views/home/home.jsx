@@ -12,12 +12,17 @@ import {
   CardHeader,
   CardBody,
   CardFooter,
-  Button
+  Button,
+  ButtonGroup,
+  IconButton,
+  
 } from "@chakra-ui/react";
+import {ArrowDownIcon} from '@chakra-ui/icons'
 
 import Equipaje from './paPerfilPortfolio.png';
 import GitHubLogo from './logotipo-de-github.png';
 import LinkeIndLogo from './linkedin.png';
+import ImagenMail from './ImagenMail.png';
 import AboutMe from "../aboutMe/aboutMe";
 
 /* import ThreeScene from './threeScene'; */
@@ -38,7 +43,7 @@ function Home() {
         >
           {/* Sección de la imagen */}
         <Flex
-          flex='2' // Ocupa todo el espacio disponible
+          flex='1' // Ocupa todo el espacio disponible
           justifyContent='center' // Centra horizontalmente
           alignItems='center' // Centra verticalmente
         >
@@ -47,7 +52,7 @@ function Home() {
           alt="Equipaje" 
           borderRadius='10px' 
           /* mt='2rem' */
-          ml='5rem'
+          ml='10rem'
           width='300px'
           /> 
         </Flex>
@@ -60,11 +65,11 @@ function Home() {
             w='100%'
             mb={{ base: '-10rem', md: '2' }}
             p={['30px', null, '50px 10%']} */
-            flex='2' 
+            flex='1' 
           /* justifyContent='flex-start'  */
           justifyContent='center'
-          alignItems='center' 
-          /* ml='3rem' */
+          alignItems='left' 
+          /* mr='6rem' */
           direction="column"
             >
             <Heading
@@ -89,23 +94,35 @@ function Home() {
             ✉ Mail: rubencorba@gmail.com
             </Text> */}
             </Heading>
-            <Flex gap="1rem">
+            <Flex gap="1rem"  mt='2rem'>
             <Image 
           src={GitHubLogo} 
           alt="GitHubLogo" 
-          /* borderRadius='10px'  */
-          mt='2rem'
-          /* ml='5rem' */
+         
+          
+          
           width='50px'
           /> 
             <Image 
           src={LinkeIndLogo} 
           alt="LinkeIndLogo" 
           /* borderRadius='10px'  */
-          mt='2rem'
+          
           /* ml='5rem' */
           width='50px'
           /> 
+            <Image 
+          src={ImagenMail} 
+          alt="ImagenMail" 
+          /* borderRadius='10px'  */
+          
+          /* ml='5rem' */
+          width='60px'
+          /> 
+          <ButtonGroup size='lg' isAttached variant='outline' width='100%'>
+            <Button color='white'>CURRICULUM</Button>
+              <IconButton color='white' aria-label='Add to friends' icon={<ArrowDownIcon/>} />
+          </ButtonGroup>
           </Flex>
 
             </Flex>
