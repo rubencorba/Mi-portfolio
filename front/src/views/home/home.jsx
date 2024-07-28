@@ -23,6 +23,17 @@ import Equipaje from './paPerfilPortfolio.png';
 import GitHubLogo from './logotipo-de-github.png';
 import LinkeIndLogo from './linkedin.png';
 import ImagenMail from './ImagenMail.png';
+import HomeVamos from './homePageVamos.png';
+import miniaturaCountries from './miniaturaCountries.jpg';
+import miniaturaRyM from './fondoRickAndMorty.jpeg';
+import miniaturaVamos from './pMiniaturaVamos.jpg';
+import logos from './logoss.png';
+import reactLogo from './reactLogo.png';
+import reduxLogo from './redux.png';
+import nodeLogo from './nodeLogo.png';
+import expressLogo from './expressLogo.png';
+import postgreLogo from './postgreLogo.png';
+import mySqlLogo from './mySqlLogo.png';
 import AboutMe from "../aboutMe/aboutMe";
 
 /* import ThreeScene from './threeScene'; */
@@ -147,12 +158,13 @@ function Home() {
             textShadow='2px 2px 4px rgba(0, 0, 0, 0.9)'
              mx='5rem'
             mb='5rem'
+            textAlign="center"
             >¡Hola! 👋 Soy Rubén Corbalán, un apasionado desarrollador web Full Stack. 👨‍💻 Inicié mi recorrido académico en la Licenciatura en Sistemas de Información en UNSE y recientemente culminé el bootcamp de Soy Henry, donde trabajé en proyectos utilizando JS, React, Node, Redux, Express, PostgreSQL, Sequelize, HTML, y CSS.
 
             Me motiva aprender nuevas tecnologías y mejorar mis habilidades en informática. Disfruto los desafíos, los viajes y la adquisición de conocimientos. He trabajado como profesor de ajedrez, recepcionista, fotógrafo, y traductor en diferentes países de América Latina, lo que me ha brindado una gran versatilidad laboral. Domino el español, inglés y portugués, y estoy abierto a nuevas oportunidades y colaboraciones en el ámbito de IT. 
             
-            Conversemos sobre cómo podemos colaborar
-            ✉ Mail: rubencorba@gmail.com
+            {/* Conversemos sobre cómo podemos colaborar
+            ✉ Mail: rubencorba@gmail.com */}
             </Text>
             {/* <ThreeScene /> */}
 
@@ -163,48 +175,123 @@ function Home() {
                 </AbsoluteCenter>
             </Box>
 
-            <Box display="flex" justifyContent="center" alignItems="center" mb='5rem'>
+            <Box 
+            display="flex" 
+            justifyContent="center" 
+            alignItems="center" 
+            mb='5rem' 
+            mx='10rem'
+            mt='5rem'>
             <SimpleGrid 
-            spacing={4} 
-            templateColumns='repeat(auto-fill, minmax(200px, 1fr))'
+            spacing={8} 
+            templateColumns='repeat(auto-fill, minmax(25rem, 1fr))'
             /* justifyItems="center"
             alignItems="center" */
             >
-  <Card>
-    <CardHeader>
-      <Heading size='md'> Customer dashboard</Heading>
-    </CardHeader>
-    <CardBody>
-      <Text>View a summary of all your customers over the last month.</Text>
-    </CardBody>
-    <CardFooter>
-      <Button>View here</Button>
-    </CardFooter>
+  <Card borderRadius="lg" boxShadow="dark-lg">
+    <Image 
+          src={HomeVamos} 
+          alt="HomeVamos" 
+          borderRadius="lg"
+          
+          width='100%'
+          height='100%'
+          objectFit="cover"
+          /> 
   </Card>
-  <Card>
-    <CardHeader>
-      <Heading size='md'> Customer dashboard</Heading>
-    </CardHeader>
-    <CardBody>
-      <Text>View a summary of all your customers over the last month.</Text>
-    </CardBody>
-    <CardFooter>
-      <Button>View here</Button>
-    </CardFooter>
+  <Card borderRadius="lg" boxShadow="dark-lg">
+  <Image 
+          src={miniaturaCountries} 
+          alt="miniaturaCountries" 
+          borderRadius="lg"
+          
+          /* ml='5rem' */
+          width='100%'
+          height='100%'
+          objectFit="cover"
+          /> 
   </Card>
-  <Card>
-    <CardHeader>
-      <Heading size='md'> Customer dashboard</Heading>
-    </CardHeader>
-    <CardBody>
-      <Text>View a summary of all your customers over the last month.</Text>
-    </CardBody>
-    <CardFooter>
-      <Button>View here</Button>
-    </CardFooter>
+  <Card borderRadius="lg" boxShadow="dark-lg">
+    
+    <Image 
+          src={miniaturaRyM} 
+          alt="miniaturaRyM" 
+          borderRadius="lg"
+          
+          width='100%'
+          height='100%'
+          objectFit="cover"
+          /> 
+  </Card>
+  <Card borderRadius="lg" boxShadow="dark-lg">
+    
+    <Image 
+          src={miniaturaVamos} 
+          alt="miniaturaVamos" 
+          borderRadius="lg"
+          
+          width='100%'
+          height='100%'
+          objectFit="cover"
+          /> 
   </Card>
 </SimpleGrid>
 </Box>
+<Box position='relative' padding='10'>
+              <Divider />
+                <AbsoluteCenter bg='white' px='4'>
+                  SKILLS
+                </AbsoluteCenter>
+            </Box>
+            <Flex gap="2rem"  mt='5rem' mx='5rem' mb='5rem'>
+            <Image 
+          src={logos} 
+          alt="logos" 
+          width='21rem'
+          /> 
+            <Image 
+          src={reactLogo} 
+          alt="reactLogo" 
+         
+          
+          
+          width='7rem'
+          /> 
+            <Image 
+          src={reduxLogo} 
+          alt="reduxLogo" 
+         
+          
+          
+          width='7rem'
+          /> 
+            <Image 
+          src={nodeLogo} 
+          alt="nodeLogo" 
+          width='7rem'
+          /> 
+            <Image 
+          src={expressLogo} 
+          alt="expressLogo" 
+          width='7rem'
+          /> 
+            <Image 
+          src={postgreLogo} 
+          alt="postgreLogo" 
+          width='7rem'
+          /> 
+            <Image 
+          src={mySqlLogo} 
+          alt="mySqlLogo" 
+          width='7rem'
+          /> 
+            </Flex>
+          <Box position='relative' padding='10'>
+              <Divider />
+                <AbsoluteCenter bg='white' px='4'>
+                  CONTACT
+                </AbsoluteCenter>
+            </Box>
             </Flex>
     );
 }

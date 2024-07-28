@@ -112,8 +112,8 @@ const NavBar = () => {
   <option value='option2'>Español</option>
   <option value='option3'>Português</option>
 </Select> */}
-<Menu>
-  <MenuButton as={Button} rightIcon={<ChevronDownIcon />} color="white" bg="transparent" border="1px solid white" _hover={{ bg: "transparent" }}>
+<Menu >
+  <MenuButton as={Button} rightIcon={<ChevronDownIcon />} mx="3" color="white" bg="transparent" border="1px solid white" _hover={{ bg: "transparent" }}>
     Language
   </MenuButton>
   <MenuList>
