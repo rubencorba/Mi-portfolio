@@ -21,7 +21,7 @@ import { Link, useLocation } from "react-router-dom";
 /* import MobileNavbar from "../navBar/mobileNavbar/mobileNavbar"; */
 import { useSelector } from "react-redux";
 import { ChevronDownIcon } from "@chakra-ui/icons";
-
+import { Link as ScrollLink } from 'react-scroll';
 
 
 const NavBar = () => {
@@ -94,25 +94,33 @@ const { language, setLanguage } = useContext(LanguageContext);
                   {/* </Link> */}
 
                   {/* <Link to="/about"> */}
+                  <ScrollLink to="about" smooth={true} duration={500}>
                     <Button colorScheme="#009ED1" fontSize="1xl" mx="3">
                       {language==='English'? 'About Me' : (language==='Español'? 'Sobre mi' : 'Sobre mim')}
                     </Button>
+                    </ScrollLink>
                   {/* </Link> */}
 
                   {/* <Link to="/questions"> */}
+                  <ScrollLink to="projects" smooth={true} duration={500}>
                     <Button colorScheme="#009ED1" fontSize="1xl" mx="3">
                     {language==='English'? 'Projects' : (language==='Español'? 'Proyectos' : 'Projetos')}
                     </Button>
+                    </ScrollLink>
                   {/* </Link> */}
                   {/* <Link to="/questions"> */}
+                  <ScrollLink to="skills" smooth={true} duration={500}>
                     <Button colorScheme="#009ED1" fontSize="1xl" mx="3">
                     {language==='English'? 'Skills' : (language==='Español'? 'Herramientas' : 'Ferramentas')}
                     </Button>
+                    </ScrollLink>
                   {/* </Link> */}
                   {/* <Link to="/questions"> */}
+                  <ScrollLink to="contact" smooth={true} duration={500}>
                     <Button colorScheme="#009ED1" fontSize="1xl" mx="3">
                     {language==='English'? 'Contact' : (language==='Español'? 'Contáctame' : 'Contato')}
                     </Button>
+                    </ScrollLink>
                   {/* </Link> */}
                   {/* <Select  color="white"  placeholder='Language' mx="3" width='10rem'> 
   <option value='option1'>English</option>
