@@ -1,3 +1,6 @@
+import React, { useContext, useState } from 'react';
+import { LanguageContext } from '../../LanguageContext'
+
 import { 
   Box, 
   Heading, 
@@ -9,9 +12,6 @@ import {
   Textarea,
   Divider,
   AbsoluteCenter,
-  CardHeader,
-  CardBody,
-  CardFooter,
   Button,
   ButtonGroup,
   IconButton,
@@ -37,12 +37,17 @@ import nodeLogo from './nodeLogo.png';
 import expressLogo from './expressLogo.png';
 import postgreLogo from './postgreLogo.png';
 import mySqlLogo from './mySqlLogo.png';
-import AboutMe from "../aboutMe/aboutMe";
+
 
 /* import ThreeScene from './threeScene'; */
 
 
 function Home() {
+
+
+  const { language } = useContext(LanguageContext);
+
+
     return (
       <Flex
       direction="column"
@@ -127,8 +132,10 @@ function Home() {
           width='60px'
           /> 
           <ButtonGroup size='lg' isAttached variant='outline' width='100%'>
-            <Button color='white'>CURRICULUM</Button>
-              <IconButton color='white' aria-label='Add to friends' icon={<ArrowDownIcon/>} />
+            <Button color='white'>
+              {language==='Español'? 'CURRÍCULUM' : 'CURRICULUM' }
+            </Button>
+              {/* <IconButton color='white' aria-label='Add to friends' icon={<ArrowDownIcon/>} /> */}
           </ButtonGroup>
           </Flex>
 
@@ -289,15 +296,16 @@ function Home() {
       /* bg="gray.100" */
       my='5rem'
     >
-              <FormControl bg='white' borderRadius="lg" width='30rem' p='1rem'>
+              <FormControl bg='white' borderRadius="lg" width='30rem' p='1rem' boxShadow="dark-lg" border='1px'>
                 <FormLabel>Email address</FormLabel>
-                <Input type='email' />
+                <Input type='email' border='1px'/>
                 <FormLabel>Message</FormLabel>
                 {/* <Input type='text' size='lg' height='10rem'/> */}
                 <Textarea
                   /* value={value}
                   onChange={handleInputChange}
                   placeholder='Here is a sample placeholder' */
+                  border='1px'
                   borderRadius="lg"
                   size='sm'
                 />

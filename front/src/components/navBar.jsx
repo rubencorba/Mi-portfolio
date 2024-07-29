@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from "react";
+
+import React, { useContext, useState } from 'react';
+import { LanguageContext } from '../LanguageContext'
 import {
   Button,
   Flex,
@@ -24,7 +26,7 @@ import { ChevronDownIcon } from "@chakra-ui/icons";
 
 const NavBar = () => {
   /* const { currentUser } = useSelector((state) => state);
-  const [navBackground, setNavBackground] = useState(false);
+  ;
   const [isMobile] = useMediaQuery("(max-width: 640px)");
   const location = useLocation();
 
@@ -43,6 +45,11 @@ const NavBar = () => {
  if (!verificationComplete) {
   return <div><Progress size='lg' isIndeterminate /></div>;
 }else{ */
+
+
+const { language, setLanguage } = useContext(LanguageContext);
+
+
  return (
   <>
     {/* {isMobile ? (
@@ -88,23 +95,23 @@ const NavBar = () => {
 
                   {/* <Link to="/about"> */}
                     <Button colorScheme="#009ED1" fontSize="1xl" mx="3">
-                      About Me
+                      {language==='English'? 'About Me' : (language==='Español'? 'Sobre mi' : 'Sobre mim')}
                     </Button>
                   {/* </Link> */}
 
                   {/* <Link to="/questions"> */}
                     <Button colorScheme="#009ED1" fontSize="1xl" mx="3">
-                      Projects
+                    {language==='English'? 'Projects' : (language==='Español'? 'Proyectos' : 'Projetos')}
                     </Button>
                   {/* </Link> */}
                   {/* <Link to="/questions"> */}
                     <Button colorScheme="#009ED1" fontSize="1xl" mx="3">
-                      Skills
+                    {language==='English'? 'Skills' : (language==='Español'? 'Herramientas' : 'Ferramentas')}
                     </Button>
                   {/* </Link> */}
                   {/* <Link to="/questions"> */}
                     <Button colorScheme="#009ED1" fontSize="1xl" mx="3">
-                      Contact
+                    {language==='English'? 'Contact' : (language==='Español'? 'Contáctame' : 'Contato')}
                     </Button>
                   {/* </Link> */}
                   {/* <Select  color="white"  placeholder='Language' mx="3" width='10rem'> 
@@ -114,12 +121,12 @@ const NavBar = () => {
 </Select> */}
 <Menu >
   <MenuButton as={Button} rightIcon={<ChevronDownIcon />} mx="3" color="white" bg="transparent" border="1px solid white" _hover={{ bg: "transparent" }}>
-    Language
-  </MenuButton>
-  <MenuList>
-    <MenuItem>English</MenuItem>
-    <MenuItem>Español</MenuItem>
-    <MenuItem>Português</MenuItem>
+    {language}
+  </MenuButton >
+  <MenuList >
+    <MenuItem value='English' onClick={(e) => {setLanguage(e.target.value)}}>English</MenuItem>
+    <MenuItem value='Español' onClick={(e) => {setLanguage(e.target.value)}}>Español</MenuItem>
+    <MenuItem value='Português' onClick={(e) => {setLanguage(e.target.value)}}>Português</MenuItem>
   </MenuList>
 </Menu>
                 </Flex>
