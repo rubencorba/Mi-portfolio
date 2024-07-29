@@ -18,7 +18,7 @@ import {
   FormControl,
   FormLabel,
   Input,
-  
+  Link
 } from "@chakra-ui/react";
 import {ArrowDownIcon, ArrowUpIcon, EmailIcon } from '@chakra-ui/icons'
 
@@ -38,7 +38,8 @@ import expressLogo from './expressLogo.png';
 import postgreLogo from './postgreLogo.png';
 import mySqlLogo from './mySqlLogo.png';
 
-import { Element, animateScroll as scroll } from 'react-scroll';
+import { Element, animateScroll as scroll} from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
 
 
 /* import ThreeScene from './threeScene'; */
@@ -61,7 +62,8 @@ function Home() {
     >
       
       <Flex
-        h='100vh'
+        /* h='100vh' */
+        mt='5rem'
         /* position= 'relative' */
         direction={{ base: "column", md: "row" }}
         /* background='linear-gradient(to right, #4ab5e8, #0d5cb6)' */
@@ -114,44 +116,54 @@ function Home() {
             </Text> */}
             </Heading>
             <Flex gap="1rem"  mt='2rem'>
+
+            <Link /* width='50px' */ href="https://github.com/rubencorba" isExternal  /* height='50px' */ >
             <Image 
           src={GitHubLogo} 
           alt="GitHubLogo" 
-         
-          
-          
           width='50px'
+          /* height='50px' */
+          objectFit="cover"
           /> 
+          </Link>
+
+          <Link  href="https://www.linkedin.com/in/rub%C3%A9n-corbal%C3%A1n-760a06287/" isExternal>
             <Image 
           src={LinkeIndLogo} 
           alt="LinkeIndLogo" 
-          /* borderRadius='10px'  */
-          
-          /* ml='5rem' */
           width='50px'
+         /*  height='50px' */
           /> 
+          </Link>
+
+          <ScrollLink to="contact" smooth={true} duration={500} >
             <Image 
           src={ImagenMail} 
           alt="ImagenMail" 
-          /* borderRadius='10px'  */
-          
-          /* ml='5rem' */
-          width='60px'
+          width='65px'
+          height='50px'
+          cursor="pointer"
           /> 
-          <ButtonGroup size='lg' isAttached variant='outline' width='100%'>
+          </ScrollLink>
+
+          <Link  href="https://drive.google.com/drive/folders/1jSoIeOiQAtMBo5poc5-sars7SDMsIAzQ?usp=drive_link" isExternal>
+          <ButtonGroup size='lg' isAttached variant='outline' /* width='100%' */>
             <Button color='white'>
               {language==='Español'? 'CURRÍCULUM' : 'CURRICULUM' }
             </Button>
               {/* <IconButton color='white' aria-label='Add to friends' icon={<ArrowDownIcon/>} /> */}
           </ButtonGroup>
+          </Link>
+
+
           </Flex>
-
+            </Flex>
             </Flex>
 
-           
-            </Flex>
+
+
             <Element name="about" id="about">
-            <Box position='relative' padding='10'>
+            <Box position='relative' padding='10' mt='5rem'>
               <Divider />
                 <AbsoluteCenter bg='white' px='4' fontWeight="bold">
                 {language==='English'? 'About Me' : (language==='Español'? 'Sobre mi' : 'Sobre mim')}
@@ -168,7 +180,7 @@ function Home() {
             
             textShadow='2px 2px 4px rgba(0, 0, 0, 0.9)'
              mx='5rem'
-            mb='5rem'
+            /* mb='5rem' */
             textAlign="center"
             >{language==='English'? "Hello! 👋 I'm Rubén Corbalán, a passionate Full Stack web developer. 👨‍💻 I began my academic journey in Information Systems at UNSE and recently completed the bootcamp at Soy Henry, where I worked on projects using JS, React, Node, Redux, Express, PostgreSQL, Sequelize, HTML, and CSS. I am motivated to learn new technologies and improve my skills in computer science. I enjoy challenges, traveling, and acquiring knowledge. I have worked as a chess instructor, receptionist, photographer, and translator (Portuguese-Spanish) in different countries in Latin America, which has provided me with great professional versatility. I speak three languages and am open to new opportunities and collaborations in the IT field."
              : (language==='Español'? '¡Hola! 👋 Soy Rubén Corbalán, un apasionado desarrollador web Full Stack. 👨‍💻 Inicié mi recorrido académico en la Licenciatura en Sistemas de Información en UNSE y recientemente culminé el bootcamp de Soy Henry, donde trabajé en proyectos utilizando JS, React, Node, Redux, Express, PostgreSQL, Sequelize, HTML, y CSS.            Me motiva aprender nuevas tecnologías y mejorar mis habilidades en informática. Disfruto los desafíos, los viajes y la adquisición de conocimientos. He trabajado como profesor de ajedrez, recepcionista, fotógrafo, y traductor en diferentes países de América Latina, lo que me ha brindado una gran versatilidad laboral. Domino el español, inglés y portugués, y estoy abierto a nuevas oportunidades y colaboraciones en el ámbito de IT.'
@@ -182,7 +194,7 @@ function Home() {
             </Element>
            
             <Element name="projects" id="projects">
-            <Box position='relative' padding='10'>
+            <Box position='relative' padding='10' mt='5rem'>
               <Divider />
                 <AbsoluteCenter bg='white' px='4' fontWeight="bold">
                 {language==='English'? 'Projects' : (language==='Español'? 'Proyectos' : 'Projetos')}
@@ -193,7 +205,7 @@ function Home() {
             display="flex" 
             justifyContent="center" 
             alignItems="center" 
-            mb='5rem' 
+            /* mb='5rem' */ 
             mx='10rem'
             mt='5rem'>
             <SimpleGrid 
@@ -202,7 +214,9 @@ function Home() {
             /* justifyItems="center"
             alignItems="center" */
             >
-  <Card borderRadius="lg" boxShadow="dark-lg">
+
+<Link  href="https://www.vamos.pe/" isExternal>
+  <Card borderRadius="lg" boxShadow="dark-lg" _hover={{ transform: "scale(1.05)", transition: "transform 0.3s" }}>
     <Image 
           src={HomeVamos} 
           alt="HomeVamos" 
@@ -213,20 +227,29 @@ function Home() {
           objectFit="cover"
           /> 
   </Card>
-  <Card borderRadius="lg" boxShadow="dark-lg">
+  </Link>
+
+  <Card borderRadius="lg" boxShadow="dark-lg" _hover={{ transform: "scale(1.05)", transition: "transform 0.3s" }}>
+  <Link  
+  href="https://github.com/rubencorba/ProyectoIndividual-Countries" isExternal
+  /* _hover={{ textDecoration: "none" }} */
+  /* display="block" */ // Asegura que el Link se comporte como un bloque contenedor.
+  >
   <Image 
           src={miniaturaCountries} 
           alt="miniaturaCountries" 
           borderRadius="lg"
-          
-          /* ml='5rem' */
           width='100%'
-          height='100%'
+          height='104.5%'
           objectFit="cover"
+          /* transition="transform 0.3s"
+      _hover={{ transform: "scale(1.05)" }} */
           /> 
+  </Link>
   </Card>
-  <Card borderRadius="lg" boxShadow="dark-lg">
-    
+
+  <Link  href="https://github.com/rubencorba/Rick-And-Morty" isExternal>
+  <Card borderRadius="lg" boxShadow="dark-lg" _hover={{ transform: "scale(1.05)", transition: "transform 0.3s" }}>
     <Image 
           src={miniaturaRyM} 
           alt="miniaturaRyM" 
@@ -237,18 +260,22 @@ function Home() {
           objectFit="cover"
           /> 
   </Card>
-  <Card borderRadius="lg" boxShadow="dark-lg">
-    
+  </Link>
+
+  <Link  href="https://github.com/VamosONG/VamosApp" isExternal>
+  <Card borderRadius="lg" boxShadow="dark-lg" _hover={{ transform: "scale(1.05)", transition: "transform 0.3s" }}>
     <Image 
           src={miniaturaVamos} 
           alt="miniaturaVamos" 
           borderRadius="lg"
           
           width='100%'
-          height='100%'
+          height='101%'
           objectFit="cover"
           /> 
   </Card>
+  </Link>
+
 </SimpleGrid>
 </Box>
 </Element>
@@ -256,7 +283,7 @@ function Home() {
 
 
 <Element name="skills" id="skills">
-<Box position='relative' padding='10'>
+<Box position='relative' padding='10' mt='5rem'>
               <Divider />
                 <AbsoluteCenter bg='white' px='4' fontWeight="bold">
                 {language==='English'? 'Skills' : (language==='Español'? 'Herramientas' : 'Ferramentas')}
