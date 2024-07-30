@@ -18,7 +18,9 @@ import {
   FormControl,
   FormLabel,
   Input,
-  Link
+  Link,
+  Wrap,
+  WrapItem
 } from "@chakra-ui/react";
 import {ArrowDownIcon, ArrowUpIcon, EmailIcon } from '@chakra-ui/icons'
 
@@ -102,7 +104,7 @@ function Home() {
             fontSize={['xl', null, '4xl']}
             textShadow='2px 2px 4px rgba(0, 0, 0, 0.9)'
             >
-            {'<Rubén Corbalán/>'}
+            {'< Rubén Corbalán />'}
             {/* <Text
             fontSize='xl'
             mt='5rem'
@@ -147,9 +149,9 @@ function Home() {
           </ScrollLink>
 
           <Link  href="https://drive.google.com/drive/folders/1jSoIeOiQAtMBo5poc5-sars7SDMsIAzQ?usp=drive_link" isExternal>
-          <ButtonGroup size='lg' isAttached variant='outline' /* width='100%' */>
-            <Button color='white'>
-              {language==='Español'? 'CURRÍCULUM' : 'CURRICULUM' }
+          <ButtonGroup size='lg' isAttached variant='outline' /* width='100%' */ height='50px'>
+            <Button color='white' height='50px'>
+              {language==='Español'? 'CURRÍCULUM' : (language==='English'?'RESUME': 'CURRÍCULO') }
             </Button>
               {/* <IconButton color='white' aria-label='Add to friends' icon={<ArrowDownIcon/>} /> */}
           </ButtonGroup>
@@ -289,7 +291,15 @@ function Home() {
                 {language==='English'? 'Skills' : (language==='Español'? 'Herramientas' : 'Ferramentas')}
                 </AbsoluteCenter>
             </Box>
-            <Flex gap="2rem"  mt='5rem' /* position='absolute' *//* mx='5rem' */ mb='5rem' alignItems="center" justifyContent="center" display="flex" >
+            {/* <Flex 
+            gap="2rem"  
+            mt='5rem' 
+            mb='5rem' 
+            alignItems="center" 
+            justifyContent="center" 
+            display="flex" 
+            flexDirection={{ base: "column", md: "row" }}
+            >
             <Image 
           src={logos} 
           alt="logos" 
@@ -325,7 +335,63 @@ function Home() {
           alt="mySqlLogo" 
           width='8rem'
           /> 
-            </Flex>
+            </Flex> */}
+            <Wrap 
+  spacing="2rem" 
+  mt='5rem' 
+  mb='5rem' 
+  justify="center" 
+>
+  <WrapItem>
+    <Image 
+      src={logos} 
+      alt="logos" 
+      width={{ base: '15rem', md: '21rem' }} 
+    /> 
+  </WrapItem>
+  <WrapItem>
+    <Image 
+      src={reactLogo} 
+      alt="reactLogo" 
+      width={{ base: '5rem', md: '8rem' }} 
+    /> 
+  </WrapItem>
+  <WrapItem>
+    <Image 
+      src={reduxLogo} 
+      alt="reduxLogo" 
+      width={{ base: '5rem', md: '8rem' }} 
+    /> 
+  </WrapItem>
+  <WrapItem>
+    <Image 
+      src={nodeLogo} 
+      alt="nodeLogo" 
+      width={{ base: '5rem', md: '8rem' }} 
+    /> 
+  </WrapItem>
+  <WrapItem>
+    <Image 
+      src={expressLogo} 
+      alt="expressLogo" 
+      width={{ base: '5rem', md: '8rem' }} 
+    /> 
+  </WrapItem>
+  <WrapItem>
+    <Image 
+      src={postgreLogo} 
+      alt="postgreLogo" 
+      width={{ base: '5rem', md: '8rem' }} 
+    /> 
+  </WrapItem>
+  <WrapItem>
+    <Image 
+      src={mySqlLogo} 
+      alt="mySqlLogo" 
+      width={{ base: '5rem', md: '8rem' }} 
+    /> 
+  </WrapItem>
+</Wrap>
             </Element>
 
             <Element name="contact" id="contact">
