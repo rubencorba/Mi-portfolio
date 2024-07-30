@@ -20,11 +20,12 @@ import {
   Input,
   Link,
   Wrap,
-  WrapItem
+  WrapItem,
+  useBreakpointValue 
 } from "@chakra-ui/react";
 import {ArrowDownIcon, ArrowUpIcon, EmailIcon } from '@chakra-ui/icons'
 
-import Equipaje from './paPerfilPortfolio.png';
+import FotoPerfil from './paPerfilPortfolio2.png';
 import GitHubLogo from './logotipo-de-github.png';
 import LinkeIndLogo from './linkedin.png';
 import ImagenMail from './ImagenMail.png';
@@ -56,6 +57,10 @@ function Home() {
     scroll.scrollToTop();
   };
 
+  // Utiliza useBreakpointValue para ajustar los valores según el tamaño de la pantalla
+  const ml = useBreakpointValue({ base: '-4rem', md: '0rem', lg: '9rem' });
+  const width = useBreakpointValue({ base: '150px', md: '200px', lg: '300px' });
+
 
     return (
       <Flex
@@ -67,7 +72,8 @@ function Home() {
         /* h='100vh' */
         mt='5rem'
         /* position= 'relative' */
-        direction={{ base: "column", md: "row" }}
+        /* direction={{ base: "column", md: "row" }} */
+        
         /* background='linear-gradient(to right, #4ab5e8, #0d5cb6)' */
         background='linear-gradient(to right, #2c5e7e, #05162b)'
         >
@@ -78,12 +84,14 @@ function Home() {
           alignItems='center' // Centra verticalmente
         >
           <Image 
-          src={Equipaje} 
-          alt="Equipaje" 
+          src={FotoPerfil} 
+          alt="FotoPerfil" 
           borderRadius='10px' 
-          /* mt='2rem' */
-          ml='10rem'
-          width='300px'
+          mt='2rem'
+          ml={{ base: '0', md: '9rem' }} 
+          width={{ base: '150px', md: '300px' }} 
+          border='2px'
+          borderColor='white'
           /> 
         </Flex>
            
@@ -117,13 +125,13 @@ function Home() {
             ✉ Mail: rubencorba@gmail.com
             </Text> */}
             </Heading>
-            <Flex gap="1rem"  mt='2rem'>
+            <Flex gap={{ base: '3px', md: '1rem' }}   mt='2rem' height={{ base: '22px', md: '50px' }} >
 
             <Link /* width='50px' */ href="https://github.com/rubencorba" isExternal  /* height='50px' */ >
             <Image 
           src={GitHubLogo} 
           alt="GitHubLogo" 
-          width='50px'
+          width={{ base: '35px', md: '50px' }} 
           /* height='50px' */
           objectFit="cover"
           /> 
@@ -133,7 +141,7 @@ function Home() {
             <Image 
           src={LinkeIndLogo} 
           alt="LinkeIndLogo" 
-          width='50px'
+          width={{ base: '35px', md: '50px' }} 
          /*  height='50px' */
           /> 
           </Link>
@@ -142,15 +150,19 @@ function Home() {
             <Image 
           src={ImagenMail} 
           alt="ImagenMail" 
-          width='65px'
-          height='50px'
+          width={{ base: '45px', md: '65px' }} 
+          
           cursor="pointer"
           /> 
           </ScrollLink>
 
           <Link  href="https://drive.google.com/drive/folders/1jSoIeOiQAtMBo5poc5-sars7SDMsIAzQ?usp=drive_link" isExternal>
-          <ButtonGroup size='lg' isAttached variant='outline' /* width='100%' */ height='50px'>
-            <Button color='white' height='50px'>
+          <ButtonGroup 
+          /* size='lg' */ 
+          isAttached variant='outline'
+           width={{ base: '80px', md: '100px' }} 
+           height={{ base: '31px', md: '50px' }} >
+            <Button color='white' height={{ base: '31px', md: '50px' }}>
               {language==='Español'? 'CURRÍCULUM' : (language==='English'?'RESUME': 'CURRÍCULO') }
             </Button>
               {/* <IconButton color='white' aria-label='Add to friends' icon={<ArrowDownIcon/>} /> */}
@@ -165,7 +177,7 @@ function Home() {
 
 
             <Element name="about" id="about">
-            <Box position='relative' padding='10' mt='5rem'>
+            <Box position='relative' padding='10' mt='3rem'>
               <Divider />
                 <AbsoluteCenter bg='white' px='4' fontWeight="bold">
                 {language==='English'? 'About Me' : (language==='Español'? 'Sobre mi' : 'Sobre mim')}
