@@ -98,9 +98,10 @@ function Home() {
             <Flex
             flex='1' 
           /* justifyContent='flex-start'  */
-          justifyContent='center'
+          justifyContent={{ base: 'flex-end', md: 'center' }} 
           alignItems='left' 
           /* mr='6rem' */
+          mb={{ base: '6rem', md: '0' }} 
           direction="column"
             >
             <Heading
@@ -125,8 +126,13 @@ function Home() {
             ✉ Mail: rubencorba@gmail.com
             </Text> */}
             </Heading>
-            <Flex gap={{ base: '3px', md: '1rem' }}   mt='2rem' height={{ base: '22px', md: '50px' }} >
-
+            <Flex 
+            gap={{ base: '3px', md: '1rem' }}   
+            mt={{ base: '1.5rem', md: '2rem' }} 
+            height={{ base: '22px', md: '50px' }} 
+            direction={{ base: "column", md: "row" }}
+            >
+              <Flex gap={{ base: '10px', md: '1rem' }}>
             <Link /* width='50px' */ href="https://github.com/rubencorba" isExternal  /* height='50px' */ >
             <Image 
           src={GitHubLogo} 
@@ -155,19 +161,23 @@ function Home() {
           cursor="pointer"
           /> 
           </ScrollLink>
+          </Flex>
 
+              <Flex mt={{ base: '1.5rem', md: '0' }}>
           <Link  href="https://drive.google.com/drive/folders/1jSoIeOiQAtMBo5poc5-sars7SDMsIAzQ?usp=drive_link" isExternal>
           <ButtonGroup 
           /* size='lg' */ 
           isAttached variant='outline'
-           width={{ base: '80px', md: '100px' }} 
-           height={{ base: '31px', md: '50px' }} >
-            <Button color='white' height={{ base: '31px', md: '50px' }}>
+           /* width={{ base: '80px', md: '100px' }}  */
+           
+           height={{ base: '40px', md: '50px' }} >
+            <Button color='white' height={{ base: '40px', md: '50px' }}>
               {language==='Español'? 'CURRÍCULUM' : (language==='English'?'RESUME': 'CURRÍCULO') }
             </Button>
               {/* <IconButton color='white' aria-label='Add to friends' icon={<ArrowDownIcon/>} /> */}
           </ButtonGroup>
           </Link>
+          </Flex>
 
 
           </Flex>
