@@ -44,6 +44,10 @@ import mySqlLogo from './mySqlLogo.png';
 import { Element, animateScroll as scroll} from 'react-scroll';
 import { Link as ScrollLink } from 'react-scroll';
 
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 /* import ThreeScene from './threeScene'; */
 
@@ -60,6 +64,40 @@ function Home() {
   // Utiliza useBreakpointValue para ajustar los valores según el tamaño de la pantalla
   const ml = useBreakpointValue({ base: '-4rem', md: '0rem', lg: '9rem' });
   const width = useBreakpointValue({ base: '150px', md: '200px', lg: '300px' });
+
+
+  const settings = {
+    dots: true, // Muestra puntos de navegación
+    infinite: true, // Hace que el carrusel sea infinito
+    speed: 400, // Velocidad de transición
+    slidesToShow: 1, // Cuántos slides se muestran al mismo tiempo
+    slidesToScroll: 1, // Cuántos slides se desplazan al hacer scroll
+    autoplay: true, // Autoplay
+    autoplaySpeed: 3000, // Velocidad del autoplay (en ms)
+    arrows: true, // Muestra flechas de navegación
+    /* responsive: [
+      {
+        breakpoint: 1024, // At 1024px or less, it shows 2 slides
+        settings: {
+          speed:1000
+        }
+      },
+      {
+        breakpoint: 600, // At 600px or less, it shows 1 slide
+        settings: {
+          speed:200
+        }
+      },
+      {
+        breakpoint: 480, // At 480px or less, it shows 1 slide
+        settings: {
+          speed:200
+        }
+      }
+    ] */
+
+    
+  };
 
 
     return (
@@ -193,7 +231,92 @@ function Home() {
                 {language==='English'? 'About Me' : (language==='Español'? 'Sobre mi' : 'Sobre mim')}
                 </AbsoluteCenter>
             </Box>
-            <Text
+
+            <Slider {...settings}  >
+              <Flex >
+            <Flex
+           
+        p={4}
+        border='1px'
+        borderColor='white'
+        borderRadius='10px'
+        color="white"
+        textAlign="center"
+        justifyContent="center"
+        alignItems="center"
+        mx={{ base: '5rem', md: '23rem' }}
+        /* width={{ base: '10rem', md: '20rem' }} */
+        /* style={{ boxSizing: 'border-box' }} */
+      >
+        Hello! 👋 I'm Rubén Corbalán, a passionate Full Stack web developer. 👨‍💻
+      </Flex>
+      </Flex>
+      <Flex>
+      <Flex
+      p={4}
+      border='1px'
+      borderColor='white'
+      borderRadius='10px'
+      color="white"
+      textAlign="center"
+      justifyContent="center"
+      alignItems="center"
+      mx={{ base: '5rem', md: '23rem' }}
+        
+      >
+        I began my academic journey in Information Systems at UNSE and recently completed the bootcamp at Soy Henry.
+      </Flex>
+      </Flex>
+      <Flex>
+      <Flex
+      p={4}
+      border='1px'
+      borderColor='white'
+      borderRadius='10px'
+      color="white"
+      textAlign="center"
+      justifyContent="center"
+      alignItems="center"
+      mx={{ base: '5rem', md: '23rem' }}
+        
+      >
+        I have experience working with real projects and as a freelancer
+      </Flex>
+      </Flex>
+      <Flex>
+      <Flex
+      p={4}
+      border='1px'
+      borderColor='white'
+      borderRadius='10px'
+      color="white"
+      textAlign="center"
+      justifyContent="center"
+      alignItems="center"
+      mx={{ base: '5rem', md: '23rem' }}
+        
+      >
+        I have worked as a chess instructor, receptionist, photographer, and translator{/*  (Portuguese-Spanish) in different countries in Latin America, which has provided me with great professional versatility */}
+      </Flex>
+      </Flex>
+      <Flex>
+      <Flex
+      p={4}
+      border='1px'
+      borderColor='white'
+      borderRadius='10px'
+      color="white"
+      textAlign="center"
+      justifyContent="center"
+      alignItems="center"
+      mx={{ base: '5rem', md: '23rem' }}
+        
+      >
+        I speak native Spanish, fluent Portuguese and advanced English
+      </Flex>
+      </Flex>
+    </Slider>
+            {/* <Text
             fontSize='xl'
             mt='5rem'
 
@@ -204,17 +327,12 @@ function Home() {
             
             textShadow='2px 2px 4px rgba(0, 0, 0, 0.9)'
              mx='5rem'
-            /* mb='5rem' */
+            
             textAlign="center"
             >{language==='English'? "Hello! 👋 I'm Rubén Corbalán, a passionate Full Stack web developer. 👨‍💻 I began my academic journey in Information Systems at UNSE and recently completed the bootcamp at Soy Henry, where I worked on projects using JS, React, Node, Redux, Express, PostgreSQL, Sequelize, HTML, and CSS. I am motivated to learn new technologies and improve my skills in computer science. I enjoy challenges, traveling, and acquiring knowledge. I have worked as a chess instructor, receptionist, photographer, and translator (Portuguese-Spanish) in different countries in Latin America, which has provided me with great professional versatility. I speak three languages and am open to new opportunities and collaborations in the IT field."
              : (language==='Español'? '¡Hola! 👋 Soy Rubén Corbalán, un apasionado desarrollador web Full Stack. 👨‍💻 Inicié mi recorrido académico en la Licenciatura en Sistemas de Información en UNSE y recientemente culminé el bootcamp de Soy Henry, donde trabajé en proyectos utilizando JS, React, Node, Redux, Express, PostgreSQL, Sequelize, HTML, y CSS.            Me motiva aprender nuevas tecnologías y mejorar mis habilidades en informática. Disfruto los desafíos, los viajes y la adquisición de conocimientos. He trabajado como profesor de ajedrez, recepcionista, fotógrafo, y traductor en diferentes países de América Latina, lo que me ha brindado una gran versatilidad laboral. Domino el español, inglés y portugués, y estoy abierto a nuevas oportunidades y colaboraciones en el ámbito de IT.'
               : 'Olá! 👋 Sou Rubén Corbalán, um apaixonado desenvolvedor web Full Stack. 👨‍💻 Iniciei meu percurso acadêmico na Licenciatura em Sistemas de Informação na UNSE e recentemente concluí o bootcamp da Soy Henry, onde trabalhei em projetos utilizando JS, React, Node, Redux, Express, PostgreSQL, Sequelize, HTML e CSS. Sou motivado a aprender novas tecnologias e melhorar minhas habilidades em informática. Gosto de desafios, viagens e aquisição de conhecimentos. Trabalhei como professor de xadrez, recepcionista, fotógrafo e tradutor (português-espanhol) em diferentes países da América Latina, o que me proporcionou uma grande versatilidade profissional. Falo três idiomas e estou aberto a novas oportunidades e colaborações na área de TI.')} 
-            
-            
-            {/* Conversemos sobre cómo podemos colaborar
-            ✉ Mail: rubencorba@gmail.com */}
-            </Text>
-
+            </Text> */}
             </Element>
            
             <Element name="projects" id="projects">
