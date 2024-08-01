@@ -391,7 +391,8 @@ function Home() {
   width={{ base: '20rem', md: '100%' }}
   borderRadius="lg" 
   boxShadow="dark-lg" 
-  _hover={{ transform: "scale(1.05)", transition: "transform 0.3s" }}>
+  _hover={{ transform: "scale(1.05)", transition: "transform 0.3s" }}
+  height='100%'>
   <Link  
   href="https://github.com/rubencorba/ProyectoIndividual-Countries" isExternal
   
