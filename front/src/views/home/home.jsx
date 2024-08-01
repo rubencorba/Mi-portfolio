@@ -225,7 +225,7 @@ function Home() {
 
 
             <Element name="about" id="about">
-            <Box position='relative' padding='10' mt='3rem'>
+            <Box position='relative' padding='10' mt='3rem' mb='2rem'>
               <Divider />
                 <AbsoluteCenter bg='white' px='4' fontWeight="bold">
                 {language==='English'? 'About Me' : (language==='Español'? 'Sobre mi' : 'Sobre mim')}
@@ -237,7 +237,7 @@ function Home() {
             <Flex
            
         p={4}
-        border='1px'
+        border='2px'
         borderColor='white'
         borderRadius='10px'
         color="white"
@@ -245,16 +245,18 @@ function Home() {
         justifyContent="center"
         alignItems="center"
         mx={{ base: '5rem', md: '23rem' }}
-        /* width={{ base: '10rem', md: '20rem' }} */
-        /* style={{ boxSizing: 'border-box' }} */
+        fontSize='xl'
+        textShadow='2px 2px 4px rgba(0, 0, 0, 0.9)'
       >
-        Hello! 👋 I'm Rubén Corbalán, a passionate Full Stack web developer. 👨‍💻
+        {language==='English'? "Hello! 👋 I'm Rubén Corbalán, a passionate Full Stack web developer 👨‍💻" 
+        : (language==='Español'? '¡Hola! 👋 Soy Rubén Corbalán, un apasionado desarrollador web Full Stack 👨‍💻' 
+        :'Olá! 👋 Sou Rubén Corbalán, um apaixonado desenvolvedor web Full Stack. 👨‍💻')}
       </Flex>
       </Flex>
       <Flex>
       <Flex
       p={4}
-      border='1px'
+      border='2px'
       borderColor='white'
       borderRadius='10px'
       color="white"
@@ -262,15 +264,19 @@ function Home() {
       justifyContent="center"
       alignItems="center"
       mx={{ base: '5rem', md: '23rem' }}
-        
+        fontSize='xl'
+        textShadow='2px 2px 4px rgba(0, 0, 0, 0.9)'
       >
-        I began my academic journey in Information Systems at UNSE and recently completed the bootcamp at Soy Henry.
+        {language==='English'? "I began my academic journey in Information Systems at UNSE and recently completed the bootcamp at Soy Henry" 
+        : (language==='Español'? 'Inicié mi recorrido académico en la Licenciatura en Sistemas de Información (UNSE) y recientemente culminé el bootcamp Soy Henry' 
+        :'Iniciei meu percurso acadêmico na Licenciatura em Sistemas de Informação e recentemente concluí o bootcamp Soy Henry')}
+        
       </Flex>
       </Flex>
       <Flex>
       <Flex
       p={4}
-      border='1px'
+      border='2px'
       borderColor='white'
       borderRadius='10px'
       color="white"
@@ -278,15 +284,19 @@ function Home() {
       justifyContent="center"
       alignItems="center"
       mx={{ base: '5rem', md: '23rem' }}
-        
+        fontSize='xl'
+        textShadow='2px 2px 4px rgba(0, 0, 0, 0.9)'
       >
-        I have experience working with real projects and as a freelancer
+        {language==='English'? "I have experience working with real projects and as a freelancer" 
+        : (language==='Español'? 'Tengo experiencia trabajando con proyectos reales y como freelancer' 
+        :'Tenho experiência trabalhando com projetos reais e como freelancer')}
+        
       </Flex>
       </Flex>
       <Flex>
       <Flex
       p={4}
-      border='1px'
+      border='2px'
       borderColor='white'
       borderRadius='10px'
       color="white"
@@ -294,15 +304,19 @@ function Home() {
       justifyContent="center"
       alignItems="center"
       mx={{ base: '5rem', md: '23rem' }}
-        
+        fontSize='xl'
+        textShadow='2px 2px 4px rgba(0, 0, 0, 0.9)'
       >
-        I have worked as a chess instructor, receptionist, photographer, and translator{/*  (Portuguese-Spanish) in different countries in Latin America, which has provided me with great professional versatility */}
+        {language==='English'? "I have also worked as a chess instructor, receptionist, photographer, and translator" 
+        : (language==='Español'? 'También he trabajado como instructor de ajedrez, recepcionista, fotógrafo y traductor' 
+        :'Também trabalhei como instrutor de xadrez, recepcionista, fotógrafo e tradutor')}
+        {/*  (Portuguese-Spanish) in different countries in Latin America, which has provided me with great professional versatility */}
       </Flex>
       </Flex>
       <Flex>
       <Flex
       p={4}
-      border='1px'
+      border='2px'
       borderColor='white'
       borderRadius='10px'
       color="white"
@@ -310,9 +324,13 @@ function Home() {
       justifyContent="center"
       alignItems="center"
       mx={{ base: '5rem', md: '23rem' }}
-        
+        fontSize='xl'
+        textShadow='2px 2px 4px rgba(0, 0, 0, 0.9)'
       >
-        I speak native Spanish, fluent Portuguese and advanced English
+        {language==='English'? "I speak native Spanish, fluent Portuguese and advanced English" 
+        : (language==='Español'? 'Hablo español nativo, portugués fluido e inglés avanzado.' 
+        :'Falo espanhol nativo, português fluente e inglês avançado')}
+        
       </Flex>
       </Flex>
     </Slider>
@@ -336,7 +354,7 @@ function Home() {
             </Element>
            
             <Element name="projects" id="projects">
-            <Box position='relative' padding='10' mt='5rem'>
+            <Box position='relative' padding='10' mt='3rem'>
               <Divider />
                 <AbsoluteCenter bg='white' px='4' fontWeight="bold">
                 {language==='English'? 'Projects' : (language==='Español'? 'Proyectos' : 'Projetos')}
@@ -357,21 +375,38 @@ function Home() {
             alignItems="center" */
             >
 
+<Flex 
+            display="flex" 
+            justifyContent="center" 
+            alignItems="center" >
 <Link  href="https://www.vamos.pe/" isExternal>
-  <Card borderRadius="lg" boxShadow="dark-lg" _hover={{ transform: "scale(1.05)", transition: "transform 0.3s" }}>
+  <Card 
+  borderRadius="lg" 
+  boxShadow="dark-lg" 
+  _hover={{ transform: "scale(1.05)", transition: "transform 0.3s" }}
+  width={{ base: '20rem', md: '100%' }}
+  >
     <Image 
           src={HomeVamos} 
           alt="HomeVamos" 
           borderRadius="lg"
           
-          width='100%'
+          /* width={{ base: '20rem', md: '100%' }} */
           height='100%'
           objectFit="cover"
           /> 
   </Card>
   </Link>
+  </Flex>
 
-  <Card borderRadius="lg" boxShadow="dark-lg" _hover={{ transform: "scale(1.05)", transition: "transform 0.3s" }}>
+              <Flex display="flex" 
+            justifyContent="center" 
+            alignItems="center" >
+  <Card 
+  width={{ base: '20rem', md: '100%' }}
+  borderRadius="lg" 
+  boxShadow="dark-lg" 
+  _hover={{ transform: "scale(1.05)", transition: "transform 0.3s" }}>
   <Link  
   href="https://github.com/rubencorba/ProyectoIndividual-Countries" isExternal
   /* _hover={{ textDecoration: "none" }} */
@@ -381,7 +416,7 @@ function Home() {
           src={miniaturaCountries} 
           alt="miniaturaCountries" 
           borderRadius="lg"
-          width='100%'
+          /* width={{ base: '20rem', md: '100%' }} */
           height='104.5%'
           objectFit="cover"
           /* transition="transform 0.3s"
@@ -389,34 +424,51 @@ function Home() {
           /> 
   </Link>
   </Card>
+  </Flex>
 
+              <Flex display="flex" 
+            justifyContent="center" 
+            alignItems="center" >
   <Link  href="https://github.com/rubencorba/Rick-And-Morty" isExternal>
-  <Card borderRadius="lg" boxShadow="dark-lg" _hover={{ transform: "scale(1.05)", transition: "transform 0.3s" }}>
+  <Card 
+  width={{ base: '20rem', md: '100%' }}
+  borderRadius="lg" 
+  boxShadow="dark-lg"
+   _hover={{ transform: "scale(1.05)", transition: "transform 0.3s" }}>
     <Image 
           src={miniaturaRyM} 
           alt="miniaturaRyM" 
           borderRadius="lg"
           
-          width='100%'
+          /* width={{ base: '20rem', md: '100%' }} */
           height='100%'
           objectFit="cover"
           /> 
   </Card>
   </Link>
+  </Flex>
 
+              <Flex display="flex" 
+            justifyContent="center" 
+            alignItems="center" >
   <Link  href="https://github.com/VamosONG/VamosApp" isExternal>
-  <Card borderRadius="lg" boxShadow="dark-lg" _hover={{ transform: "scale(1.05)", transition: "transform 0.3s" }}>
+  <Card 
+  width={{ base: '20rem', md: '100%' }}
+  borderRadius="lg" 
+  boxShadow="dark-lg" 
+  _hover={{ transform: "scale(1.05)", transition: "transform 0.3s" }}>
     <Image 
           src={miniaturaVamos} 
           alt="miniaturaVamos" 
           borderRadius="lg"
           
-          width='100%'
+          /* width={{ base: '20rem', md: '100%' }} */
           height='101%'
           objectFit="cover"
           /> 
   </Card>
   </Link>
+  </Flex>
 
 </SimpleGrid>
 </Box>
@@ -480,6 +532,7 @@ function Home() {
   spacing="2rem" 
   mt='5rem' 
   mb='5rem' 
+  mx='2rem' 
   justify="center" 
 >
   <WrapItem>
@@ -541,14 +594,17 @@ function Home() {
                 {language==='English'? 'Contact' : (language==='Español'? 'Contáctame' : 'Contato')}
                 </AbsoluteCenter>
             </Box>
+
+            
             <Flex
-      /* height="100vh" */
+      
       alignItems="center"
       justifyContent="center"
-      /* bg="gray.100" */
+      
       my='5rem'
+      mx='2rem'
     >
-              <FormControl bg='white' borderRadius="lg" width='30rem' p='1rem' boxShadow="dark-lg" border='1px'>
+              {<FormControl bg='white' borderRadius="lg" width='30rem' p='1rem' boxShadow="dark-lg" border='1px'>
                 <FormLabel>
                 {language==='English'? 'Email Address' : (language==='Español'? 'Correo Electrónico' : 'Endereço de email')}
                 </FormLabel>
@@ -556,19 +612,23 @@ function Home() {
                 <FormLabel>
                 {language==='English'? 'Message' : (language==='Español'? 'Mensaje' : 'Message')}
                 </FormLabel>
-                {/* <Input type='text' size='lg' height='10rem'/> */}
+                
                 <Textarea
-                  /* value={value}
-                  onChange={handleInputChange}
-                  placeholder='Here is a sample placeholder' */
+                  
                   border='1px'
                   borderRadius="lg"
                   size='sm'
                 />
-                <Button leftIcon={<EmailIcon />} color=/* '#2c5e7e' */'#2c5e7e' /* bg="#2c5e7e" */border='2px' borderColor='#2c5e7e' variant='solid' mt='1rem'>
+                <Button 
+                leftIcon={<EmailIcon />} 
+                color='#2c5e7e' 
+                border='2px' 
+                borderColor='#2c5e7e' 
+                variant='solid' 
+                mt='1rem'>
                 {language==='English'? 'Send' : 'Enviar'}
                 </Button>
-              </FormControl>
+              </FormControl>}
            
             </Flex>
             </Element>
@@ -578,7 +638,7 @@ function Home() {
         onClick={scrollToTop}
         position="fixed"
         bottom="20px"
-        right="20px"
+        right="40px"
         colorScheme="blue"
         borderRadius="full"
         p={4}

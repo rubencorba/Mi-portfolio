@@ -145,6 +145,7 @@ const NavBar = () => {
       zIndex="999"
       px="4"
       transition="background 0.5s ease"
+      overflowX= 'hidden'
     >
       <Box>
         {/* Icono de hamburguesa para dispositivos móviles */}
