@@ -104,6 +104,7 @@ function Home() {
       <Flex
       direction="column"
       background='linear-gradient(to right, #2c5e7e, #05162b)'
+      overflowX= 'hidden'
     >
       
       <Flex
@@ -141,6 +142,7 @@ function Home() {
           /* mr='6rem' */
           mb={{ base: '6rem', md: '0' }} 
           direction="column"
+          
             >
             <Heading
             
@@ -233,7 +235,7 @@ function Home() {
             </Box>
 
             <Slider {...settings}  >
-              <Flex >
+              <Flex width="100%">
             <Flex
            
         p={4}
@@ -244,7 +246,7 @@ function Home() {
         textAlign="center"
         justifyContent="center"
         alignItems="center"
-        mx={{ base: '5rem', md: '23rem' }}
+        mx={{ base: '4rem', md: '23rem' }}
         fontSize='xl'
         textShadow='2px 2px 4px rgba(0, 0, 0, 0.9)'
       >
@@ -253,7 +255,7 @@ function Home() {
         :'Olá! 👋 Sou Rubén Corbalán, um apaixonado desenvolvedor web Full Stack. 👨‍💻')}
       </Flex>
       </Flex>
-      <Flex>
+      <Flex width="100%">
       <Flex
       p={4}
       border='2px'
@@ -263,7 +265,7 @@ function Home() {
       textAlign="center"
       justifyContent="center"
       alignItems="center"
-      mx={{ base: '5rem', md: '23rem' }}
+      mx={{ base: '4rem', md: '23rem' }}
         fontSize='xl'
         textShadow='2px 2px 4px rgba(0, 0, 0, 0.9)'
       >
@@ -273,7 +275,7 @@ function Home() {
         
       </Flex>
       </Flex>
-      <Flex>
+      <Flex width="100%">
       <Flex
       p={4}
       border='2px'
@@ -283,7 +285,7 @@ function Home() {
       textAlign="center"
       justifyContent="center"
       alignItems="center"
-      mx={{ base: '5rem', md: '23rem' }}
+      mx={{ base: '4rem', md: '23rem' }}
         fontSize='xl'
         textShadow='2px 2px 4px rgba(0, 0, 0, 0.9)'
       >
@@ -293,7 +295,7 @@ function Home() {
         
       </Flex>
       </Flex>
-      <Flex>
+      <Flex width="100%">
       <Flex
       p={4}
       border='2px'
@@ -303,17 +305,17 @@ function Home() {
       textAlign="center"
       justifyContent="center"
       alignItems="center"
-      mx={{ base: '5rem', md: '23rem' }}
+      mx={{ base: '4rem', md: '23rem' }}
         fontSize='xl'
         textShadow='2px 2px 4px rgba(0, 0, 0, 0.9)'
       >
         {language==='English'? "I have also worked as a chess instructor, receptionist, photographer, and translator" 
         : (language==='Español'? 'También he trabajado como instructor de ajedrez, recepcionista, fotógrafo y traductor' 
         :'Também trabalhei como instrutor de xadrez, recepcionista, fotógrafo e tradutor')}
-        {/*  (Portuguese-Spanish) in different countries in Latin America, which has provided me with great professional versatility */}
+        
       </Flex>
       </Flex>
-      <Flex>
+      <Flex width="100%">
       <Flex
       p={4}
       border='2px'
@@ -323,7 +325,7 @@ function Home() {
       textAlign="center"
       justifyContent="center"
       alignItems="center"
-      mx={{ base: '5rem', md: '23rem' }}
+      mx={{ base: '4rem', md: '23rem' }}
         fontSize='xl'
         textShadow='2px 2px 4px rgba(0, 0, 0, 0.9)'
       >
@@ -334,23 +336,7 @@ function Home() {
       </Flex>
       </Flex>
     </Slider>
-            {/* <Text
-            fontSize='xl'
-            mt='5rem'
-
-            color='white'
-            textTransform='uppercase'
-            fontFamily="'DIN Alternate Black', sans-serif"
-            letterSpacing='2px'
             
-            textShadow='2px 2px 4px rgba(0, 0, 0, 0.9)'
-             mx='5rem'
-            
-            textAlign="center"
-            >{language==='English'? "Hello! 👋 I'm Rubén Corbalán, a passionate Full Stack web developer. 👨‍💻 I began my academic journey in Information Systems at UNSE and recently completed the bootcamp at Soy Henry, where I worked on projects using JS, React, Node, Redux, Express, PostgreSQL, Sequelize, HTML, and CSS. I am motivated to learn new technologies and improve my skills in computer science. I enjoy challenges, traveling, and acquiring knowledge. I have worked as a chess instructor, receptionist, photographer, and translator (Portuguese-Spanish) in different countries in Latin America, which has provided me with great professional versatility. I speak three languages and am open to new opportunities and collaborations in the IT field."
-             : (language==='Español'? '¡Hola! 👋 Soy Rubén Corbalán, un apasionado desarrollador web Full Stack. 👨‍💻 Inicié mi recorrido académico en la Licenciatura en Sistemas de Información en UNSE y recientemente culminé el bootcamp de Soy Henry, donde trabajé en proyectos utilizando JS, React, Node, Redux, Express, PostgreSQL, Sequelize, HTML, y CSS.            Me motiva aprender nuevas tecnologías y mejorar mis habilidades en informática. Disfruto los desafíos, los viajes y la adquisición de conocimientos. He trabajado como profesor de ajedrez, recepcionista, fotógrafo, y traductor en diferentes países de América Latina, lo que me ha brindado una gran versatilidad laboral. Domino el español, inglés y portugués, y estoy abierto a nuevas oportunidades y colaboraciones en el ámbito de IT.'
-              : 'Olá! 👋 Sou Rubén Corbalán, um apaixonado desenvolvedor web Full Stack. 👨‍💻 Iniciei meu percurso acadêmico na Licenciatura em Sistemas de Informação na UNSE e recentemente concluí o bootcamp da Soy Henry, onde trabalhei em projetos utilizando JS, React, Node, Redux, Express, PostgreSQL, Sequelize, HTML e CSS. Sou motivado a aprender novas tecnologias e melhorar minhas habilidades em informática. Gosto de desafios, viagens e aquisição de conhecimentos. Trabalhei como professor de xadrez, recepcionista, fotógrafo e tradutor (português-espanhol) em diferentes países da América Latina, o que me proporcionou uma grande versatilidade profissional. Falo três idiomas e estou aberto a novas oportunidades e colaborações na área de TI.')} 
-            </Text> */}
             </Element>
            
             <Element name="projects" id="projects">
@@ -365,14 +351,13 @@ function Home() {
             display="flex" 
             justifyContent="center" 
             alignItems="center" 
-            /* mb='5rem' */ 
+             
             mx='10rem'
             mt='5rem'>
             <SimpleGrid 
             spacing={8} 
             templateColumns='repeat(auto-fill, minmax(25rem, 1fr))'
-            /* justifyItems="center"
-            alignItems="center" */
+            
             >
 
 <Flex 
@@ -391,7 +376,7 @@ function Home() {
           alt="HomeVamos" 
           borderRadius="lg"
           
-          /* width={{ base: '20rem', md: '100%' }} */
+          
           height='100%'
           objectFit="cover"
           /> 
@@ -409,18 +394,16 @@ function Home() {
   _hover={{ transform: "scale(1.05)", transition: "transform 0.3s" }}>
   <Link  
   href="https://github.com/rubencorba/ProyectoIndividual-Countries" isExternal
-  /* _hover={{ textDecoration: "none" }} */
-  /* display="block" */ // Asegura que el Link se comporte como un bloque contenedor.
+  
   >
   <Image 
           src={miniaturaCountries} 
           alt="miniaturaCountries" 
           borderRadius="lg"
-          /* width={{ base: '20rem', md: '100%' }} */
+          
           height='104.5%'
           objectFit="cover"
-          /* transition="transform 0.3s"
-      _hover={{ transform: "scale(1.05)" }} */
+          
           /> 
   </Link>
   </Card>
@@ -440,7 +423,7 @@ function Home() {
           alt="miniaturaRyM" 
           borderRadius="lg"
           
-          /* width={{ base: '20rem', md: '100%' }} */
+          
           height='100%'
           objectFit="cover"
           /> 
@@ -462,7 +445,7 @@ function Home() {
           alt="miniaturaVamos" 
           borderRadius="lg"
           
-          /* width={{ base: '20rem', md: '100%' }} */
+          
           height='101%'
           objectFit="cover"
           /> 
@@ -483,51 +466,7 @@ function Home() {
                 {language==='English'? 'Skills' : (language==='Español'? 'Herramientas' : 'Ferramentas')}
                 </AbsoluteCenter>
             </Box>
-            {/* <Flex 
-            gap="2rem"  
-            mt='5rem' 
-            mb='5rem' 
-            alignItems="center" 
-            justifyContent="center" 
-            display="flex" 
-            flexDirection={{ base: "column", md: "row" }}
-            >
-            <Image 
-          src={logos} 
-          alt="logos" 
-          width='21rem'
-          /> 
-            <Image 
-          src={reactLogo} 
-          alt="reactLogo" 
-          width='8rem'
-          /> 
-            <Image 
-          src={reduxLogo} 
-          alt="reduxLogo" 
-          width='8rem'
-          /> 
-            <Image 
-          src={nodeLogo} 
-          alt="nodeLogo" 
-          width='8rem'
-          /> 
-            <Image 
-          src={expressLogo} 
-          alt="expressLogo" 
-          width='8rem'
-          /> 
-            <Image 
-          src={postgreLogo} 
-          alt="postgreLogo" 
-          width='8rem'
-          /> 
-            <Image 
-          src={mySqlLogo} 
-          alt="mySqlLogo" 
-          width='8rem'
-          /> 
-            </Flex> */}
+            
             <Wrap 
   spacing="2rem" 
   mt='5rem' 
@@ -638,7 +577,7 @@ function Home() {
         onClick={scrollToTop}
         position="fixed"
         bottom="20px"
-        right="40px"
+        right="20px"
         colorScheme="blue"
         borderRadius="full"
         p={4}
