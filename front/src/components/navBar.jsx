@@ -156,6 +156,7 @@ const NavBar = () => {
             onClick={toggleMobileMenu}
             bg="transparent"
             _hover={{ bg: "transparent" }}
+            color='white'
           />
         ) : null}
       </Box>

@@ -65,6 +65,9 @@ function Home() {
   const ml = useBreakpointValue({ base: '-4rem', md: '0rem', lg: '9rem' });
   const width = useBreakpointValue({ base: '150px', md: '200px', lg: '300px' });
 
+  const handleClick= () => {
+  window.alert(language === 'English' ? 'Email sent successfully!' : (language === 'Español' ? '¡Correo enviado con éxito!' : 'Email enviado com sucesso!'));
+  }
 
   const settings = {
     dots: true, // Muestra puntos de navegación
@@ -544,11 +547,18 @@ function Home() {
       my='5rem'
       mx='2rem'
     >
-              {<FormControl bg='white' borderRadius="lg" width='30rem' p='1rem' boxShadow="dark-lg" border='1px'>
+              {/* <FormControl 
+              bg='white' 
+              borderRadius="lg" 
+              width='30rem'
+              p='1rem' 
+              boxShadow="dark-lg" 
+              border='1px'
+              action="https://formsubmit.co/rubencorba@gmail.com" method="POST">
                 <FormLabel>
                 {language==='English'? 'Email Address' : (language==='Español'? 'Correo Electrónico' : 'Endereço de email')}
                 </FormLabel>
-                <Input type='email' border='1px'/>
+                <Input type='email' border='1px' name='email'/>
                 <FormLabel>
                 {language==='English'? 'Message' : (language==='Español'? 'Mensaje' : 'Message')}
                 </FormLabel>
@@ -558,8 +568,12 @@ function Home() {
                   border='1px'
                   borderRadius="lg"
                   size='sm'
+                  name='Texto'
                 />
                 <Button 
+                type='submit'
+                value='enviar'
+
                 leftIcon={<EmailIcon />} 
                 color='#2c5e7e' 
                 border='2px' 
@@ -568,7 +582,56 @@ function Home() {
                 mt='1rem'>
                 {language==='English'? 'Send' : 'Enviar'}
                 </Button>
-              </FormControl>}
+              </FormControl> */}
+              <form
+      action="https://formsubmit.co/rubencorba@gmail.com"
+      method="POST"
+      style={{
+        background: 'white',
+        borderRadius: 'lg',
+        width: '30rem',
+        padding: '1rem',
+        boxShadow: 'dark-lg',
+        border: '1px solid',
+      }}
+    >
+      <FormControl>
+        <FormLabel>
+          {language === 'English' ? 'Email Address' : (language === 'Español' ? 'Correo Electrónico' : 'Endereço de email')}
+        </FormLabel>
+        <Input type='email' border='1px' name='email' required />
+      </FormControl>
+
+      <FormControl mt='1rem'>
+        <FormLabel>
+          {language === 'English' ? 'Message' : (language === 'Español' ? 'Mensaje' : 'Message')}
+        </FormLabel>
+        <Textarea
+          border='1px'
+          borderRadius="lg"
+          size='sm'
+          name='message'
+          required
+        />
+      </FormControl>
+
+      <input type="hidden" name="_next" value="https://rubencorbalan.vercel.app/" /> {/* Para que no redirija a otra página al enviar */}
+      <input type="hidden" name="_captcha" value="false" />  {/* Para evitar bots */}
+
+      <Button
+        type='submit'
+        value='enviar'
+        leftIcon={<EmailIcon />}
+        color='#2c5e7e'
+        border='2px'
+        borderColor='#2c5e7e'
+        variant='solid'
+        mt='1rem'
+        onClick={handleClick}
+      >
+        {language === 'English' ? 'Send' : 'Enviar'}
+      </Button>
+    </form>
            
             </Flex>
             </Element>
