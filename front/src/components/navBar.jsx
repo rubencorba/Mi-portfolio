@@ -146,6 +146,7 @@ const NavBar = () => {
       px="4"
       transition="background 0.5s ease"
       /* overflowX= 'hidden' */
+      fontFamily="Open Sans, sans-serif"
     >
       <Box>
         {/* Icono de hamburguesa para dispositivos móviles */}

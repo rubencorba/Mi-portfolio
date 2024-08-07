@@ -214,7 +214,7 @@ function Home() {
            /* width={{ base: '80px', md: '100px' }}  */
            
            height={{ base: '40px', md: '50px' }} >
-            <Button color='white' height={{ base: '40px', md: '50px' }}>
+            <Button color='white' height={{ base: '40px', md: '50px' }} fontFamily="Open Sans, sans-serif">
               {language==='Español'? 'CURRÍCULUM' : (language==='English'?'RESUME': 'CURRÍCULO') }
             </Button>
               {/* <IconButton color='white' aria-label='Add to friends' icon={<ArrowDownIcon/>} /> */}
@@ -232,7 +232,7 @@ function Home() {
             <Element name="about" id="about">
             <Box position='relative' padding='10' mt='3rem' mb='2rem'>
               <Divider />
-                <AbsoluteCenter bg='white' px='4' fontWeight="bold">
+                <AbsoluteCenter bg='white' px='4' fontWeight="bold" fontFamily="Open Sans, sans-serif">
                 {language==='English'? 'About Me' : (language==='Español'? 'Sobre mi' : 'Sobre mim')}
                 </AbsoluteCenter>
             </Box>
@@ -252,6 +252,7 @@ function Home() {
         mx={{ base: '4rem', md: '23rem' }}
         fontSize='xl'
         textShadow='2px 2px 4px rgba(0, 0, 0, 0.9)'
+        fontFamily="Open Sans, sans-serif"
       >
         {language==='English'? "Hello! 👋 I'm Rubén Corbalán, a passionate Full Stack web developer 👨‍💻" 
         : (language==='Español'? '¡Hola! 👋 Soy Rubén Corbalán, un apasionado desarrollador web Full Stack 👨‍💻' 
@@ -271,6 +272,7 @@ function Home() {
       mx={{ base: '4rem', md: '23rem' }}
         fontSize='xl'
         textShadow='2px 2px 4px rgba(0, 0, 0, 0.9)'
+        fontFamily="Open Sans, sans-serif"
       >
         {language==='English'? "I began my academic journey in Information Systems at UNSE and recently completed the bootcamp at Soy Henry" 
         : (language==='Español'? 'Inicié mi recorrido académico en la Licenciatura en Sistemas de Información (UNSE) y recientemente culminé el bootcamp Soy Henry' 
@@ -291,6 +293,7 @@ function Home() {
       mx={{ base: '4rem', md: '23rem' }}
         fontSize='xl'
         textShadow='2px 2px 4px rgba(0, 0, 0, 0.9)'
+        fontFamily="Open Sans, sans-serif"
       >
         {language==='English'? "I have experience working with real projects and as a freelancer" 
         : (language==='Español'? 'Tengo experiencia trabajando con proyectos reales y como freelancer' 
@@ -311,6 +314,7 @@ function Home() {
       mx={{ base: '4rem', md: '23rem' }}
         fontSize='xl'
         textShadow='2px 2px 4px rgba(0, 0, 0, 0.9)'
+        fontFamily="Open Sans, sans-serif"
       >
         {language==='English'? "I have also worked as a chess instructor, receptionist, photographer, and translator" 
         : (language==='Español'? 'También he trabajado como instructor de ajedrez, recepcionista, fotógrafo y traductor' 
@@ -331,6 +335,8 @@ function Home() {
       mx={{ base: '4rem', md: '23rem' }}
         fontSize='xl'
         textShadow='2px 2px 4px rgba(0, 0, 0, 0.9)'
+
+        fontFamily="Open Sans, sans-serif"
       >
         {language==='English'? "I speak native Spanish, fluent Portuguese and advanced English" 
         : (language==='Español'? 'Hablo español nativo, portugués fluido e inglés avanzado.' 
@@ -345,7 +351,7 @@ function Home() {
             <Element name="projects" id="projects">
             <Box position='relative' padding='10' mt='3rem'>
               <Divider />
-                <AbsoluteCenter bg='white' px='4' fontWeight="bold">
+                <AbsoluteCenter bg='white' px='4' fontWeight="bold" fontFamily="Open Sans, sans-serif">
                 {language==='English'? 'Projects' : (language==='Español'? 'Proyectos' : 'Projetos')}
                 </AbsoluteCenter>
             </Box>
@@ -466,7 +472,7 @@ function Home() {
 <Element name="skills" id="skills">
 <Box position='relative' padding='10' mt='5rem'>
               <Divider />
-                <AbsoluteCenter bg='white' px='4' fontWeight="bold">
+                <AbsoluteCenter bg='white' px='4' fontWeight="bold" fontFamily="Open Sans, sans-serif">
                 {language==='English'? 'Skills' : (language==='Español'? 'Herramientas' : 'Ferramentas')}
                 </AbsoluteCenter>
             </Box>
@@ -533,19 +539,43 @@ function Home() {
             <Element name="contact" id="contact">
           <Box position='relative' padding='10'>
               <Divider />
-                <AbsoluteCenter bg='white' px='4' fontWeight="bold">
+                <AbsoluteCenter bg='white' px='4' fontWeight="bold" fontFamily="Open Sans, sans-serif">
                 {language==='English'? 'Contact' : (language==='Español'? 'Contáctame' : 'Contato')}
                 </AbsoluteCenter>
             </Box>
 
+            <Flex 
+            direction="column" 
+            justifyContent="center"
+            alignItems="center"
+            mx='1rem'>
+                <Text 
+                mt='1rem' 
+                color='white' 
+                fontSize='xl' 
+                as='b'
+                justifyContent="center"
+                alignItems="center"
+                direction="column"
+                textAlign="center"
+                fontFamily="Open Sans, sans-serif"
+                >
+                  {language==='Español'? 'Emprendamos proyectos innovadores juntos!!' 
+                  : (language==='English'?"Let's start innovative projects together!!"
+                  : 'Vamos juntos iniciar projetos inovadores!!') }
+                </Text>
+                </Flex>
+
             
             <Flex
-      
+      /* direction="column" */
       alignItems="center"
       justifyContent="center"
-      
-      my='5rem'
+      my='3rem'
       mx='2rem'
+      borderRadius="lg"
+      /* boxShadow="dark-lg" */
+      /* width= '30rem' */
     >
               {/* <FormControl 
               bg='white' 
@@ -583,6 +613,9 @@ function Home() {
                 {language==='English'? 'Send' : 'Enviar'}
                 </Button>
               </FormControl> */}
+                
+
+                {/* <Flex  borderRadius= 'lg'> */}
               <form
       action="https://formsubmit.co/rubencorba@gmail.com"
       method="POST"
@@ -596,14 +629,14 @@ function Home() {
       }}
     >
       <FormControl>
-        <FormLabel>
+        <FormLabel fontFamily="Open Sans, sans-serif">
           {language === 'English' ? 'Email Address' : (language === 'Español' ? 'Correo Electrónico' : 'Endereço de email')}
         </FormLabel>
         <Input type='email' border='1px' name='email' required />
       </FormControl>
 
       <FormControl mt='1rem'>
-        <FormLabel>
+        <FormLabel fontFamily="Open Sans, sans-serif">
           {language === 'English' ? 'Message' : (language === 'Español' ? 'Mensaje' : 'Message')}
         </FormLabel>
         <Textarea
@@ -628,10 +661,13 @@ function Home() {
         variant='solid'
         mt='1rem'
         onClick={handleClick}
+
+        fontFamily="Open Sans, sans-serif"
       >
         {language === 'English' ? 'Send' : 'Enviar'}
       </Button>
     </form>
+    
            
             </Flex>
             </Element>
