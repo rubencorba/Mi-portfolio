@@ -65,9 +65,33 @@ function Home() {
   const ml = useBreakpointValue({ base: '-4rem', md: '0rem', lg: '9rem' });
   const width = useBreakpointValue({ base: '150px', md: '200px', lg: '300px' });
 
-  const handleClick= () => {
-  window.alert(language === 'English' ? 'Email sent successfully!' : (language === 'Español' ? '¡Correo enviado con éxito!' : 'Email enviado com sucesso!'));
-  }
+  const handleClick = (event) => {
+    event.preventDefault(); // Previene el envío del formulario por defecto
+  
+    const email = document.querySelector("input[name='email']").value;
+    const message = document.querySelector("textarea[name='message']").value;
+  
+    if (!email || !message) {
+      window.alert(
+        language === 'English'
+          ? 'Please fill in both the email and message fields!'
+          : language === 'Español'
+          ? '¡Por favor, complete tanto el correo electrónico como el mensaje!'
+          : 'Por favor, preencha tanto o email quanto a mensagem!'
+      );
+    } else {
+      window.alert(
+        language === 'English'
+          ? 'Email sent successfully!'
+          : language === 'Español'
+          ? '¡Correo enviado con éxito!'
+          : 'Email enviado com sucesso!'
+      );
+      
+      // Si todo está bien, enviamos el formulario
+      event.target.closest('form').submit(); // Enviar el formulario
+    }
+  };
 
   const settings = {
     dots: true, // Muestra puntos de navegación
