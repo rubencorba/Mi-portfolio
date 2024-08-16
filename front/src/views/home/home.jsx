@@ -54,7 +54,6 @@ import "slick-carousel/slick/slick-theme.css";
 
 function Home() {
 
-
   const { language } = useContext(LanguageContext);
 
   const scrollToTop = () => {
