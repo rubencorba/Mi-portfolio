@@ -60,10 +60,6 @@ function Home() {
     scroll.scrollToTop();
   };
 
-  // Utiliza useBreakpointValue para ajustar los valores según el tamaño de la pantalla
-  const ml = useBreakpointValue({ base: '-4rem', md: '0rem', lg: '9rem' });
-  const width = useBreakpointValue({ base: '150px', md: '200px', lg: '300px' });
-
   const handleClick = (event) => {
     event.preventDefault(); // Previene el envío del formulario por defecto
   
