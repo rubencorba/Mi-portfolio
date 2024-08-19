@@ -96,29 +96,7 @@ function Home() {
     slidesToScroll: 1, // Cuántos slides se desplazan al hacer scroll
     autoplay: true, // Autoplay
     autoplaySpeed: 3000, // Velocidad del autoplay (en ms)
-    arrows: true, // Muestra flechas de navegación
-    /* responsive: [
-      {
-        breakpoint: 1024, // At 1024px or less, it shows 2 slides
-        settings: {
-          speed:1000
-        }
-      },
-      {
-        breakpoint: 600, // At 600px or less, it shows 1 slide
-        settings: {
-          speed:200
-        }
-      },
-      {
-        breakpoint: 480, // At 480px or less, it shows 1 slide
-        settings: {
-          speed:200
-        }
-      }
-    ] */
-
-    
+    arrows: true, // Muestra flechas de navegación  
   };
 
 
