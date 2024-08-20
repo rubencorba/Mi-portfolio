@@ -48,10 +48,6 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
-/* import ThreeScene from './threeScene'; */
-
-
 function Home() {
 
   const { language } = useContext(LanguageContext);
