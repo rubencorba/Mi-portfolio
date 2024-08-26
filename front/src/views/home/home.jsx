@@ -104,12 +104,7 @@ function Home() {
     >
       
       <Flex
-        /* h='100vh' */
         mt='5rem'
-        /* position= 'relative' */
-        /* direction={{ base: "column", md: "row" }} */
-        
-        /* background='linear-gradient(to right, #4ab5e8, #0d5cb6)' */
         background='linear-gradient(to right, #2c5e7e, #05162b)'
         >
           {/* Sección de la imagen */}
@@ -132,10 +127,8 @@ function Home() {
            
             <Flex
             flex='1' 
-          /* justifyContent='flex-start'  */
           justifyContent={{ base: 'flex-end', md: 'center' }} 
           alignItems='left' 
-          /* mr='6rem' */
           mb={{ base: '6rem', md: '0' }} 
           direction="column"
           
@@ -150,17 +143,7 @@ function Home() {
             textShadow='2px 2px 4px rgba(0, 0, 0, 0.9)'
             >
             {'< Rubén Corbalán />'}
-            {/* <Text
-            fontSize='xl'
-            mt='5rem'
-
-            lineHeight='1.5'
-            >Argentino con pasión por el desarrollo Web 👨‍💻 <br/><br/>
-
-            Conversemos sobre cómo diseñar tu página web para que sea única <br/><br/>
-
-            ✉ Mail: rubencorba@gmail.com
-            </Text> */}
+            
             </Heading>
             <Flex 
             gap={{ base: '3px', md: '1rem' }}   
