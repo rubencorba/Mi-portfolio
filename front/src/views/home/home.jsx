@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { LanguageContext } from '../../LanguageContext'
 
 import { 
@@ -14,22 +14,21 @@ import {
   AbsoluteCenter,
   Button,
   ButtonGroup,
-  IconButton,
+  
   FormControl,
   FormLabel,
   Input,
   Link,
   Wrap,
-  WrapItem,
-  useBreakpointValue 
+  WrapItem 
 } from "@chakra-ui/react";
-import {ArrowDownIcon, ArrowUpIcon, EmailIcon } from '@chakra-ui/icons'
+import { ArrowUpIcon, EmailIcon } from '@chakra-ui/icons'
 
 import FotoPerfil from './paPerfilPortfolio2.png';
 import GitHubLogo from './logotipo-de-github.png';
 import LinkeIndLogo from './linkedin.png';
 import ImagenMail from './ImagenMail.png';
-import HomeVamos from './homePageVamos.png';
+import HomeVamos from './MiniaturaVamos2.png';
 import miniaturaCountries from './miniaturaCountries.jpg';
 import miniaturaRyM from './fondoRickAndMorty.jpeg';
 import miniaturaVamos from './pMiniaturaVamos.jpg';
@@ -40,6 +39,8 @@ import nodeLogo from './nodeLogo.png';
 import expressLogo from './expressLogo.png';
 import postgreLogo from './postgreLogo.png';
 import mySqlLogo from './mySqlLogo.png';
+import Ajedrez from './AjedMiniatura.png';
+import SanNicolas from './SanNicolasMiniatura.png';
 
 import { Element, animateScroll as scroll} from 'react-scroll';
 import { Link as ScrollLink } from 'react-scroll';
@@ -349,6 +350,29 @@ function Home() {
             display="flex" 
             justifyContent="center" 
             alignItems="center" >
+<Link  href="https://github.com/rubencorba/MunicipioSanNicolas" isExternal>
+  <Card 
+  borderRadius="lg" 
+  boxShadow="dark-lg" 
+  _hover={{ transform: "scale(1.05)", transition: "transform 0.3s" }}
+  width={{ base: '20rem', md: '100%' }}
+  >
+    <Image 
+          src={SanNicolas} 
+          alt="San Nicolas" 
+          borderRadius="lg"
+          
+          
+          height='100%'
+          objectFit="cover"
+          /> 
+  </Card>
+  </Link>
+  </Flex>
+<Flex 
+            display="flex" 
+            justifyContent="center" 
+            alignItems="center" >
 <Link  href="https://www.vamos.pe/" isExternal>
   <Card 
   borderRadius="lg" 
@@ -359,6 +383,30 @@ function Home() {
     <Image 
           src={HomeVamos} 
           alt="HomeVamos" 
+          borderRadius="lg"
+          
+          
+          height='100%'
+          objectFit="cover"
+          /> 
+  </Card>
+  </Link>
+  </Flex>
+<Flex 
+            display="flex" 
+            justifyContent="center" 
+            alignItems="center" >
+<Link  href="https://ajedrez-sgo-del-estero.vercel.app/" isExternal>
+  <Card 
+  borderRadius="lg" 
+  boxShadow="dark-lg" 
+  _hover={{ transform: "scale(1.05)", transition: "transform 0.3s" }}
+  width={{ base: '20rem', md: '100%' }}
+  height='100%'
+  >
+    <Image 
+          src={Ajedrez} 
+          alt="Ajedrez" 
           borderRadius="lg"
           
           
@@ -387,7 +435,7 @@ function Home() {
           alt="miniaturaCountries" 
           borderRadius="lg"
           
-          height='104.5%'
+          height='100%'
           objectFit="cover"
           
           /> 
@@ -552,46 +600,8 @@ function Home() {
       borderRadius="lg"
       /* boxShadow="dark-lg" */
       /* width= '30rem' */
-    >
-              {/* <FormControl 
-              bg='white' 
-              borderRadius="lg" 
-              width='30rem'
-              p='1rem' 
-              boxShadow="dark-lg" 
-              border='1px'
-              action="https://formsubmit.co/rubencorba@gmail.com" method="POST">
-                <FormLabel>
-                {language==='English'? 'Email Address' : (language==='Español'? 'Correo Electrónico' : 'Endereço de email')}
-                </FormLabel>
-                <Input type='email' border='1px' name='email'/>
-                <FormLabel>
-                {language==='English'? 'Message' : (language==='Español'? 'Mensaje' : 'Message')}
-                </FormLabel>
-                
-                <Textarea
-                  
-                  border='1px'
-                  borderRadius="lg"
-                  size='sm'
-                  name='Texto'
-                />
-                <Button 
-                type='submit'
-                value='enviar'
+    >                
 
-                leftIcon={<EmailIcon />} 
-                color='#2c5e7e' 
-                border='2px' 
-                borderColor='#2c5e7e' 
-                variant='solid' 
-                mt='1rem'>
-                {language==='English'? 'Send' : 'Enviar'}
-                </Button>
-              </FormControl> */}
-                
-
-                {/* <Flex  borderRadius= 'lg'> */}
               <form
       action="https://formsubmit.co/rubencorba@gmail.com"
       method="POST"
